@@ -1,0 +1,78 @@
+/* ========== Responsive Styles ========== */
+
+
+
+/* --------- max width 991px -------- */
+@media only screen and (max-width: 991px) {
+	/* Main menu */
+	.navbar-nav > li > a {
+		font-size: 14px !important;
+	}
+}
+
+/* --------- Styles for Screen width between 768px To 1023px -------- */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+
+/* --------- Styles for Screen width Smaller than 767px -------- */
+@media only screen and (max-width: 767px) {
+	
+	/* Main menu */
+	.navbar-collapse {
+		margin-left: -16px;
+		margin-right: -16px;
+		background: rgba(0, 0, 0, .3) !important;
+		overflow-y:scroll;
+		max-height: 200px;
+	}
+
+	.navbar-nav > li > a {
+		padding-left: 30px;
+	}
+	
+}
+
+
+/* --------- Styles for Screen width Smaller than 480px -------- */
+@media only screen and (max-width: 480px) {
+	/* Headings for mobile View */
+	h1 {
+		font-size: 36px;
+		line-height: 48px;
+	}
+
+	h2 {
+		font-size: 26px;
+		line-height: 34px;
+	}
+
+	h3 {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	#section-feature {
+		padding-top: 140px;
+		padding-bottom: 40px;
+	}
+	
+	.well-come {
+		margin-top: 150px;
+		font-size: 48px;
+	}
+	
+	/* Sreenshots */
+
+}
+
+
+/* --------- Styles for Screen width Smaller than 360px -------- */
+@media only screen and (max-width: 360px) {
+
+}
+
+
+
+
+

@@ -1,0 +1,466 @@
+/* ===========================
+
+Author: MH Rafi
+Website: http://themegret.com
+
+============================== */
+
+/* ==================== CSS Structure ==================== 
+1. COMMON STYLES
+	- Reset Styles
+	- Common Classes
+	- Pre Loader Styles
+	
+2. HTML ELEMENTS STYLE
+	- Button Styles
+
+3. HEADER SECTION
+	- Main Navigation Styles
+	- Home section
+	
+4. FEATURE SECTION
+5. SERVICE SECTION
+6. STEP SECTION
+7. Video SECTION
+
+8. SCREENSHOT SECTION
+	- ScreenShots hover effect style
+
+9. TESTIMONIAL SECTION
+10. PRICING SECTION
+	- Folding Effect
+
+11. SUBSCIBE SECTION
+12. DOWNLOAD SECTION
+13. CONTACT SECTION
+14. FOOTER SECTION
+========================================================== */
+
+
+/* --------------- Reset Styles --------------- */
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 28px;
+	font-weight: 300;
+	color: #666666;
+	overflow-x: hidden !important;
+	-webkit-font-smoothing: antialiased;
+	background: url("../images/bg-slider/bg-1.jpg") no-repeat fixed ;
+}
+
+a {
+	color: #cccccc;
+	text-decoration: none;
+}
+
+a:hover, a:focus, .btn:focus {
+    text-decoration: none;
+	outline: none;
+	color: #6c6b6b
+}
+
+input:focus, textarea:focus {
+	outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', sans-serif;
+	text-transform:capitalize;
+	letter-spacing: 1px;
+	color: #FFFFFF;
+}
+
+h1 {
+    font-size: 72px;
+    line-height: 82px;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 60px;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 45px;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+h5 {
+    font-size: 18px;
+	line-height: 25px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul, ol {
+	padding-left: 0 !important;
+}
+
+li {
+	list-style: none;
+}
+
+/* --------------- Common Classes --------------- */
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.justify {
+	text-align: justify;
+}
+
+.strong {
+font-weight: 700;
+}
+
+.floatright {
+	float:right;
+}
+
+.floatleft {
+	float:left;
+}
+
+.floatnone {
+	float:none;
+}
+
+.fixed {
+	position:fixed;
+}
+
+.absolute {
+	position:absolute;
+}
+
+.relative {
+	position:relative;
+}
+
+.container {
+	position:relative;
+	z-index: 10;
+}
+
+.section-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.animated {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.section-title {
+	margin-bottom: 48px;
+}
+
+.section-title h3, .section-title h4 {
+	color: #F4F4F4;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	display: inline-block;
+	margin-top: 0;
+	padding: 8px 0;
+	
+}
+
+.section-overlay {
+	background: rgba(0, 0, 0, .7) !important;
+	z-index: 5;
+}
+
+
+
+/* --------------- Pre Loader Styles --------------- */
+#preloader {
+	position:fixed;
+	top: 0;
+	left: 0;
+	background-color:#FFF;
+	width: 100%;
+	height: 100%;
+	z-index: 10050;
+}
+
+.loading-circle {
+	position: absolute;
+	left: 49%;
+	top: 49%;
+	height: 48px;
+	width: 48px;
+	border-radius: 50%;
+	border-top: 2px solid #7F8C8D;
+	border-right: 2px solid rgba(0,0,0, 0);
+	border-bottom: 2px solid #7F8C8D;
+	border-left: 2px solid rgba(0,0,0, 0);
+}
+
+/* =============== HTML element styles =============== */
+/* --------------- Button Styles --------------- */
+.button-line {
+	background: transparent;
+	display: inline-block;
+	font-weight: 400;
+	border-radius: 4px;
+	border: 1px solid;
+	margin: 10px;
+	overflow: visible;
+}
+
+.no-text .icon {
+	margin: 0;
+}
+
+.btn .icon {
+	margin-left: 13px;
+}
+
+.button-white {
+	border-color: #fff;
+	color: #fff;
+}
+
+.button-white:hover {
+	border-color: #fff;
+	color: #fff;
+}
+
+
+
+/* ================ Header Section ================ */
+
+.header-section {
+	position:relative;
+}
+
+/* --------------- Main Navigation Styles --------------- */
+.sticky-bar-wrap {
+	position:fixed;
+	width: 100%;
+	z-index: 1025;
+}
+
+.sticky-section {
+	width: 100%;
+	height: 80px;
+	z-index: 1025;
+	transition: all .3s ease-in;
+	background: rgba(0,0,0, .15);
+}
+
+.nav-bg {
+	background: rgba(0,0,0, .6);
+}
+
+.site-name {
+	color: #fff;
+	font-family: 'Bangers', cursive;
+	font-size: 24px;
+	padding: 8px 15px;
+	letter-spacing: 1px;
+}
+
+.site-name span {
+	color: #fff;
+	padding: 0 13px;
+	font-weight: 400;
+	height: 35px;
+	width: 35px;
+	display: inline-block;
+	margin-right: 3px;
+	font-size: 28px;
+	line-height: 35px;
+}
+
+.nav-hold {
+	left: 0;
+	right: 0;
+	top: 0;
+	padding-top: 13px;
+	z-index: 1025;
+}
+
+ul.nav > li > a {
+	color:#fff;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+ul.nav > li > a:hover, ul.nav > li > a:focus {
+	background: none !important;
+}
+
+li.current a,
+ul.nav > li > a:hover {
+color:#ccc !important;
+}
+
+.navbar-toggle .icon-bar {
+	background: #ffffff;
+}
+
+
+/* --------------- Home section --------------- */
+
+
+.section-home {
+	position:relative;
+}
+
+.home {
+	min-height: 750px;
+}
+
+.well-come {
+	position:relative;
+	font-size: 50px;
+	line-height: 62px;
+	margin-top: 240px;
+	margin-bottom: 48px;
+	color:#fff !important;
+	font-weight: 700;
+	text-transform:uppercase;
+}
+
+.well-come:after {
+position: absolute;
+content: "";
+width: 220px;
+height: 1px;
+background-color: #FFF;
+bottom: -16px;
+left: calc(50% - 110px);
+}
+
+.intro-message {
+	font-size: 20px;
+	line-height: 1.4;
+	margin-bottom: 48px;
+	color: #fff;
+}
+
+
+/* ================ Subhaus Section ================ */
+#section-subhaus {
+	background: rgba(0, 0, 0, .7) !important;
+	/*background: url("../images/2.jpg") no-repeat fixed center center;*/
+	/*background-size: cover;*/
+	/*background-position: 70% 50%;*/
+	/*background-attachment: fixed;*/
+	height: 800px;
+}
+
+/* ================ Pitstop Section ================ */
+#section-pitstop {
+	background: rgba(0, 0, 0, .7) !important;
+	/*background: url("../images/clock.jpg") no-repeat fixed center center;*/
+	/*background-size: cover;*/
+	/*background-position: 70% 50%;*/
+	/*background-attachment: fixed;*/
+	height: 800px;
+}
+
+/* ================ Flux Section ================ */
+#section-flux {
+	background: rgba(0, 0, 0, .7) !important;
+	/*background: url("../images/5.jpg") no-repeat fixed center center;*/
+	/*background-size: cover;*/
+	/*background-position: 70% 50%;*/
+	/*background-attachment: fixed;*/
+	height: 800px;
+}
+
+/* ================ Monroe Section ================ */
+#section-monroe {
+	background: rgba(0, 0, 0, .7) !important;
+	/*background: url("../images/8.jpg") no-repeat fixed center center;*/
+	/*background-size: cover;*/
+	/*background-position: 70% 50%;*/
+	/*background-attachment: fixed;*/
+	height: 800px;
+}
+
+/* ================ Events Section ================ */
+#section-events {
+	background: rgba(0, 0, 0, .7) !important;
+	/*background-image: url("../images/3.jpg") no-repeat center center;*/
+	/*background: url("../images/3.jpg") no-repeat fixed center center;*/
+	/*background-size: cover;*/
+	/*background-position: 70% 50%;*/
+	/*background-attachment: fixed;*/
+	height: 800px;
+}
+
+#eventsTable td {
+	color: #00b3ee;
+	border-radius: 5px;
+}
+
+/* ================ Team Section ================ */
+#section-team {
+	background: rgba(0, 0, 0, .7) !important;
+	height: 800px;
+}
+
+/* ================ Location Section ================ */
+#section-location {
+	background: rgba(0, 0, 0, .7) !important;
+	height: 800px;
+}
+
+/* ================ Footer Section ================ */
+#section-footer {
+	background: rgba(0, 0, 0, .7) !important;
+}
+
+.footer-title {
+	display: inline-block;
+	margin-bottom: 40px;
+	text-transform: none;
+}
+
+.social-icons ul li {
+	display: inline-block;
+}
+
+.social-icons ul li a{
+	margin-left: 10px;
+	font-size: 28px;
+	color: #9D9D9D;
+	font-weight: normal;
+	text-shadow: none;
+
+	-webkit-transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+
+.copyright {
+	padding-top: 15px;
+}
+
+.animated2 {
+	-webkit-animation: lightSpeedIn 1s ease-in 200ms both;
+	animation: lightSpeedIn 1s ease-in 200ms both;
+}
+
