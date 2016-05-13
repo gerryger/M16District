@@ -57,7 +57,7 @@ return [
             'host'      => env('DB_HOST', 'mysql.idhostinger.com'),
             'database'  => env('DB_DATABASE', 'u125737924_m16'),
             'username'  => env('DB_USERNAME', 'u125737924_root'),
-            'password'  => env('DB_PASSWORD', ''),
+            'password'  => env('DB_PASSWORD', 'asdASD123!@#'),
             //'unix_socket' => '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
