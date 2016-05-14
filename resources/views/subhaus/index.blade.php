@@ -43,7 +43,7 @@
                             <a class="btn-col" href="{{ url('/') }}">
 									<span class="icon">
 										<i class="fa fa-arrow-left"></i>
-										<img src="{{ asset('pitstop_asset/images/m16logo.png') }}">
+										<img src="{{ asset('pitstop_asset/images/m16Logo.png') }}">
 									</span>
                             </a>
                         </div>
@@ -554,7 +554,7 @@
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                         {{--<p class="sub-footer-text text-center">&copy; Copyright 2016, Theme by <a href="#">Telematics Research Group</a></p>--}}
                         <h3 class="menu_head text-center">Member Of</h3>
-                        <a href="{{ url('/') }}"><img src="{{ asset('landingpage_asset/images/_m16logo.png') }}" style="width: 100%;"></a>
+                        <a href="{{ url('/') }}"><img src="{{ asset('landingpage_asset/images/_m16Logo.png') }}" style="width: 100%;"></a>
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <a href="{{ url('/monroe') }}"><img src="{{ asset('landingpage_asset/images/_monroeLogo.png') }}" style="max-width: 100%;max-height: 100%"></a>

@@ -154,7 +154,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 span_1_of_4 timmings">
 					<h3 class="text-center">Member Of</h3>
-					<a href="{{ url('/') }}"><img src="{{ asset('landingpage_asset/images/_m16logo.png') }}" style="width: 100%;"></a>
+					<a href="{{ url('/') }}"><img src="{{ asset('landingpage_asset/images/_m16Logo.png') }}" style="width: 100%;"></a>
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-md-6">
 							<a href="{{ url('/monroe') }}"><img src="{{ asset('landingpage_asset/images/_monroeLogo.png') }}" style="max-width: 100%;max-height: 100%"></a>
