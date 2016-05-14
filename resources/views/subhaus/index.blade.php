@@ -106,37 +106,6 @@
                             </div>
                         @endforeach
                     @endif
-                    <!-- M16 District [END] -->
-
-                    <!-- Subhaus [START] -->
-                    {{--<div class="item">--}}
-                        {{--<div class="overlay-slide">--}}
-                            {{--<img src="{{ asset('subhaus_asset/images/SubhausGallery/IMG_1465.JPG') }}" style="height: 100%;width: 100%"  alt="" class="img-responsive">--}}
-                        {{--</div>--}}
-                        {{--<div class="carousel-caption">--}}
-                            {{--<div class="col-md-12 col-xs-12 text-center">--}}
-                                {{--<img src="{{ asset('subhaus_asset/images/subhaus_logo.png') }}" style="width: 300px;height: 300px;border: hidden" alt="..." />--}}
-                                {{--<br/>--}}
-                                {{--<h1 class="animated3">asd</h1>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    <!-- Subhaus [END] -->
-
-                    <!-- Monroe [START] -->
-                    {{--<div class="item">--}}
-                        {{--<div class="overlay-slide">--}}
-                            {{--<img src="{{ asset('subhaus_asset/images/SubhausGallery/IMG_1573.JPG') }}" style="height: 100%;width: 100%" alt="" class="img-responsive">--}}
-                        {{--</div>--}}
-                        {{--<div class="carousel-caption">--}}
-                            {{--<div class="col-md-12 col-xs-12 text-center">--}}
-                                {{--<img src="{{ asset('subhaus_asset/images/subhaus_logo.png') }}" style="width: 300px;height: 300px;border: hidden" alt="..." />--}}
-                                {{--<br/>--}}
-                                {{--<h1 class="animated3">def</h1>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    <!-- Monroe [START] -->
                 </div> 	 <!-- End Carousel Inner -->
 
                 <!-- Controls -->
@@ -215,70 +184,6 @@
                                     {{--<img src="{{ asset('subhaus_asset/images/SubhausGallery/IMG_1573.JPG') }}" height="210" alt="Food" >--}}
                                     {{--<h2 class="white">1573G</h2>--}}
                                 {{--</li>--}}
-
-                                {{--<li class="item beverages">--}}
-                                    {{--<div class="overlay-item">--}}
-                                        {{--<h2 class="overlay-content">asd</h2>--}}
-                                        {{--<h2 class="overlay-content">IDR 30K</h2>--}}
-                                    {{--</div>--}}
-                                    {{--<img src="{{ asset('subhaus_asset/images/SubhausGallery/IMG_1574.JPG') }}" height="210" alt="Food" >--}}
-                                    {{--<h2 class="white">1574</h2>--}}
-                                {{--</li>--}}
-
-                                {{--<li class="item beverages">--}}
-                                    {{--<div class="overlay-item">--}}
-                                        {{--<h2 class="overlay-content">asd</h2>--}}
-                                        {{--<h2 class="overlay-content">IDR 30K</h2>--}}
-                                    {{--</div>--}}
-                                    {{--<img src="{{ asset('subhaus_asset/images/SubhausGallery/IMG_1575.JPG') }}" alt="Food" >--}}
-                                    {{--<h2 class="white">1575</h2>--}}
-                                {{--</li>--}}
-
-                                {{--<li class="item beverages">--}}
-                                    {{--<div class="overlay-item">--}}
-                                        {{--<h2 class="overlay-content">asd</h2>--}}
-                                        {{--<h2 class="overlay-content">IDR 30K</h2>--}}
-                                    {{--</div>--}}
-                                    {{--<img src="{{ asset('subhaus_asset/images/SubhausGallery/IMG_1578.JPG') }}" alt="Food" >--}}
-                                    {{--<h2 class="white">1578</h2>--}}
-                                {{--</li>--}}
-
-                                {{--<li class="item food">--}}
-                                    {{--<div class="overlay-item">--}}
-                                        {{--<h2 class="overlay-content">asd</h2>--}}
-                                        {{--<h2 class="overlay-content">IDR 30K</h2>--}}
-                                    {{--</div>--}}
-                                    {{--<img src="{{ asset('subhaus_asset/images/SubhausGallery/IMG_1579.JPG') }}" alt="Food" >--}}
-                                    {{--<h2 class="white">1579</h2>--}}
-                                {{--</li>--}}
-
-                                {{--<li class="item food">--}}
-                                    {{--<div class="overlay-item">--}}
-                                        {{--<h2 class="overlay-content">asd</h2>--}}
-                                        {{--<h2 class="overlay-content">IDR 30K</h2>--}}
-                                    {{--</div>--}}
-                                    {{--<img src="{{ asset('subhaus_asset/images/SubhausGallery/IMG_1581.JPG') }}" alt="Food" >--}}
-                                    {{--<h2 class="white">1581</h2>--}}
-                                {{--</li>--}}
-
-                                {{--<li class="item food">--}}
-                                    {{--<div class="overlay-item">--}}
-                                        {{--<h2 class="overlay-content">asd</h2>--}}
-                                        {{--<h2 class="overlay-content">IDR 30K</h2>--}}
-                                    {{--</div>--}}
-                                    {{--<img src="{{ asset('subhaus_asset/images/SubhausGallery/IMG_1583.JPG') }}" alt="Food" >--}}
-                                    {{--<h2 class="white">1583</h2>--}}
-                                {{--</li>--}}
-
-                                {{--<li class="item food">--}}
-                                    {{--<div class="overlay-item">--}}
-                                        {{--<h2 class="overlay-content">asd</h2>--}}
-                                        {{--<h2 class="overlay-content">IDR 30K</h2>--}}
-                                    {{--</div>--}}
-                                    {{--<img src="{{ asset('subhaus_asset/images/SubhausGallery/IMG_1584.JPG') }}" alt="Food" >--}}
-                                    {{--<h2 class="white">1584</h2>--}}
-                                {{--</li>--}}
-
                             </ul><!-- @end #portfolio -->
                         </div><!-- @end #w -->
                     </div>

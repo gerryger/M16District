@@ -27,7 +27,10 @@ class SubhausController extends Controller
             return view('subhaus.index', [
                 'sliders'=>S_slider::all(),
                 'abouts'=>S_about::all(),
-                'pricings'=>S_pricing::all()
+                'pricings'=>S_pricing::all(),
+                'foods1'=>S_featureddish::where('category', 'food1'),
+                'foods2'=>S_featureddish::where('category', 'food2'),
+                'drinks'=>S_featureddish::where('category', 'drinks')
             ]);
         }
     /*##############FRONT END PAGE [END]##############*/
