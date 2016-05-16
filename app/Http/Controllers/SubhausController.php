@@ -28,9 +28,9 @@ class SubhausController extends Controller
                 'sliders'=>S_slider::all(),
                 'abouts'=>S_about::all(),
                 'pricings'=>S_pricing::all(),
-                'foods1'=>S_featureddish::where('category', 'food1'),
-                'foods2'=>S_featureddish::where('category', 'food2'),
-                'drinks'=>S_featureddish::where('category', 'drinks')
+                'foods1'=>S_featureddish::where('category', 'food1')->get(),
+                'foods2'=>S_featureddish::where('category', 'food2')->get(),
+                'drinks'=>S_featureddish::where('category', 'drinks')->get()
             ]);
         }
     /*##############FRONT END PAGE [END]##############*/
@@ -79,8 +79,8 @@ class SubhausController extends Controller
                     $slider->created_by = $created_by;
 
                     //upload image
-                    Image::make($request->file('image'))->resize(1454,631)->save(base_path().'/public/subhaus_asset/images/slider/'.$imgName)->destroy();
-                    Image::make($request->file('image2'))->resize(300,300)->save(base_path().'/public/subhaus_asset/images/slider/'.$imgName2)->destroy();
+                    Image::make($request->file('image'))->fit(1454,631)->save(base_path().'/public/subhaus_asset/images/slider/'.$imgName)->destroy();
+                    Image::make($request->file('image2'))->fit(300,300)->save(base_path().'/public/subhaus_asset/images/slider/'.$imgName2)->destroy();
 
                     $slider->save();
 
@@ -138,8 +138,8 @@ class SubhausController extends Controller
                     $selSlider->headingColor = $headingColor;
                     $selSlider->created_by = $created_by;
 
-                    Image::make($request->file('image'))->resize(1454,631)->save(base_path().'/public/subhaus_asset/images/slider/'.$imgName)->destroy();
-                    Image::make($request->file('image2'))->resize(300,300)->save(base_path().'/public/subhaus_asset/images/slider/'.$imgName2)->destroy();
+                    Image::make($request->file('image'))->fit(1454,631)->save(base_path().'/public/subhaus_asset/images/slider/'.$imgName)->destroy();
+                    Image::make($request->file('image2'))->fit(300,300)->save(base_path().'/public/subhaus_asset/images/slider/'.$imgName2)->destroy();
 
                     $selSlider->save();
 
@@ -206,10 +206,10 @@ class SubhausController extends Controller
                         $obj->image4 = $imgName4;
                         $obj->created_by = $created_by;
 
-                        Image::make($request->file('image1'))->resize(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName1)->destroy();
-                        Image::make($request->file('image2'))->resize(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName2)->destroy();
-                        Image::make($request->file('image3'))->resize(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName3)->destroy();
-                        Image::make($request->file('image4'))->resize(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName4)->destroy();
+                        Image::make($request->file('image1'))->fit(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName1)->destroy();
+                        Image::make($request->file('image2'))->fit(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName2)->destroy();
+                        Image::make($request->file('image3'))->fit(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName3)->destroy();
+                        Image::make($request->file('image4'))->fit(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName4)->destroy();
 
                         $obj->save();
 
@@ -277,10 +277,10 @@ class SubhausController extends Controller
                     $obj->image4 = $imgName4;
                     $obj->created_by = $created_by;
 
-                    Image::make($request->file('image1'))->resize(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName1)->destroy();
-                    Image::make($request->file('image2'))->resize(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName2)->destroy();
-                    Image::make($request->file('image3'))->resize(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName3)->destroy();
-                    Image::make($request->file('image4'))->resize(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName4)->destroy();
+                    Image::make($request->file('image1'))->fit(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName1)->destroy();
+                    Image::make($request->file('image2'))->fit(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName2)->destroy();
+                    Image::make($request->file('image3'))->fit(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName3)->destroy();
+                    Image::make($request->file('image4'))->fit(250,220)->save(base_path().'/public/subhaus_asset/images/about/'.$imgName4)->destroy();
 
                     $obj->save();
 
@@ -607,6 +607,15 @@ class SubhausController extends Controller
             $imageExtensionOnly = substr($str, $pos, strlen($str)-1);
 
             return $imageExtensionOnly;
+        }
+    
+        //POST
+        public function s_dosendemail(Request $request){
+			if($request != null){
+				//send email
+				
+				
+			}
         }
     /*##############ADMIN PAGE [END]##############*/
 }

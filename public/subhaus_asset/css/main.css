@@ -275,13 +275,13 @@ INTRO CONTAINER
 }
 
 .bread.background_content{
-    background: url('../images/breakfast.jpg') no-repeat center center;
+    background: url('../images/SubhausGallery/IMG_1579.JPG') no-repeat center center;
     background-size: cover;
     background-position: 70% 50%;
     background-attachment: fixed;
 }
  .featured.background_content{
-    background: url('../images/featured.jpg') no-repeat center center; 
+    background: url('../images/SubhausGallery/IMG_1578.JPG') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

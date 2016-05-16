@@ -196,22 +196,26 @@
 
 
         <section id ="beer" class="description_content">
-            <div  class="beer background_content">
-                <h1>Try Our <span>Don's Meatball Subs</span></h1>
-            </div>
-            <div class="text-content container"> 
-                <div class="col-md-5">
-                   <div class="img-section">
-                       <img src="{{ asset('subhaus_asset/images/SubhausGallery/FullSizeRender.jpg') }}" width="100%" />
-                   </div>
-                </div>
-                <br>
-                <div class="col-md-6 col-md-offset-1">
-                    <h1>Don's Meatball Subs</h1>
-                    <div class="icon-beer fa-2x"></div>
-                    <p class="desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit leo, molestie gravida leo eget, placerat dignissim ante. Duis consectetur gravida elit, at malesuada lectus sollicitudin vitae. Vivamus scelerisque ipsum justo, ac malesuada erat auctor vel. Vivamus in massa a purus posuere lobortis.</p>
-                </div>
-            </div>
+			@if(is_array($foods1) || is_object($foods1))
+				@foreach($foods1 as $food1)
+					<div  class="beer background_content">
+						<h1><span>{{ $food1->heading1 }}</span></h1>
+					</div>
+					<div class="text-content container"> 
+						<div class="col-md-5">
+						   <div class="img-section">
+							   <img src="{{ asset('subhaus_asset/images/featured_dishes/'.$food1->image1) }}" width="100%"/>
+						   </div>
+						</div>
+						<br>
+						<div class="col-md-6 col-md-offset-1">
+							<h1>{{ $food1->heading2 }}</h1>
+							<div class="icon-beer fa-2x"></div>
+							<p class="desc-text">{{ $food1->description }}</p>
+						</div>
+					</div>
+				@endforeach
+			@endif
         </section>
 
 
@@ -219,20 +223,24 @@
 
 
         <section id="bread" class=" description_content">
-            <div  class="bread background_content">
-                <h1>Ever tried our <span>Burgerdelics</span> ?</h1>
-            </div>
-            <div class="text-content container"> 
-                <div class="col-md-6">
-                    <h1>Burgerdelics</h1>
-                    <div class="icon-bread fa-2x"></div>
-                    <p class="desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit leo, molestie gravida leo eget, placerat dignissim ante. Duis consectetur gravida elit, at malesuada lectus sollicitudin vitae. Vivamus scelerisque ipsum justo, ac malesuada erat auctor vel. Vivamus in massa a purus posuere lobortis.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="{{ asset('subhaus_asset/images/bread1.jpg') }}" width="260" alt="Bread">
-                    <img src="{{ asset('subhaus_asset/images/bread1.jpg') }}" width="260" alt="Bread">
-                </div>
-            </div>
+            @if(is_array($foods2) || is_object($foods2))
+                @foreach($foods2 as $food2)
+                    <div  class="bread background_content">
+                        <h1><span>{{ $food2->heading1 }}</span></h1>
+                    </div>
+                    <div class="text-content container">
+                        <div class="col-md-6">
+                            <h1>{{ $food2->heading2 }}</h1>
+                            <div class="icon-bread fa-2x"></div>
+                            <p class="desc-text">{{  $food2->description }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{{ asset('subhaus_asset/images/featured_dishes/'.$food2->image1) }}" alt="Bread">
+                            <img src="{{ asset('subhaus_asset/images/featured_dishes/'.$food2->image2) }}" alt="Bread"> {{--width="260"--}}
+                        </div>
+                    </div>
+                @endforeach
+            @endif
         </section>
 
 
@@ -240,50 +248,54 @@
         <!-- ============ Featured Dish  ============= -->
 
         <section id="featured" class="description_content">
-            <div  class="featured background_content">
-                <h1>Our Featured <span>Drinks</span></h1>
-            </div>
-            <div class="text-content container"> 
-                <div class="col-md-6">
-                    <h1>Have a look to our Drinks!</h1>
-                    <div class="icon-hotdog fa-2x"></div>
-                    <p class="desc-text">Each food is handmade at the crack of dawn, using only the simplest of ingredients to bring out smells and flavors that beckon the whole block. Stop by anytime and experience simplicity at its finest.</p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="image_box_story2">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="{{ asset('subhaus_asset/images/slider/subhaus-1.PNG') }}" style="width: 500px;height: 300px;"  alt="...">
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <img src="{{ asset('subhaus_asset/images/slider/subhaus-2.PNG') }}" style="width: 500px;height: 300px;" alt="...">
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <img src="{{ asset('subhaus_asset/images/slider3.JPG') }}" style="width: 500px;height: 300px;" alt="...">
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
-                                </div>
-                            </div>
+            @if(is_array($drinks) || is_object($drinks))
+                @foreach($drinks as $drink)
+                    <div  class="featured background_content">
+                        <h1><span>{{$drink->heading1}}</span></h1>
+                    </div>
+                    <div class="text-content container">
+                        <div class="col-md-6">
+                            <h1>{{$drink->heading2}}</h1>
+                            <div class="icon-hotdog fa-2x"></div>
+                            <p class="desc-text">{{$drink->description}}</p>
                         </div>
-                    </ul>
-                </div>
-            </div>
+                        <div class="col-md-6">
+                            <ul class="image_box_story2">
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="{{ asset('subhaus_asset/images/featured_dishes/'.$drink->image1) }}"  alt="...">
+                                            <div class="carousel-caption">
+
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="{{ asset('subhaus_asset/images/featured_dishes/'.$drink->image2) }}"  alt="...">
+                                            <div class="carousel-caption">
+
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="{{ asset('subhaus_asset/images/featured_dishes/'.$drink->image3) }}"  alt="...">{{--style="width: 500px;height: 300px;"--}}
+                                            <div class="carousel-caption">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
         </section>
 
         <!-- ============ Reservation  ============= -->
@@ -377,7 +389,8 @@
                             <!-- Form Area -->
                             <div class="contact-form">
                                 <!-- Form -->
-                                <form id="contact-us" method="post" action="contact.php">
+<!--                                <form id="contact-us" method="post" action="contact.php">-->
+                                {!! Form::open(array('id'=>'contact-us', 'method'=>'post', 'url'=>'/s_dosendemail')) !!}
                                     <!-- Left Inputs -->
                                     <div class="col-md-6 ">
                                         <!-- Name -->
@@ -399,7 +412,8 @@
                                     </div><!-- End Bottom Submit -->
                                     <!-- Clear -->
                                     <div class="clear"></div>
-                                </form>
+<!--                                </form>-->
+                                {!! Form::close() !!}
                             </div><!-- End Contact Form Area -->
                         </div><!-- End Inner -->
                     </div>
@@ -483,7 +497,7 @@
             <div class="footer_b">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <p class="text-block" style="color: #FFFFFF"> &copy; 2016 by <span style="color: #985f0d">Telematics Research Group </span></p>
+                            <p class="text-block" style="color: #FFFFFF"> &copy; 2016 by <span style="color: #985f0d">Global Resource Solusindo </span></p>
                         </div>
                     </div>
             </div>

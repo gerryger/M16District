@@ -44,6 +44,7 @@ Route::group(['middleware' => ['web']], function () {
 
     //Subhaus
     Route::get('/subhaus', 'SubhausController@index');
+    Route::post('/s_dosendemail', 'SubhausController@s_dosendemail');
 
 
     //Flux
