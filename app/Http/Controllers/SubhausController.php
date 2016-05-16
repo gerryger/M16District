@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
 
@@ -612,9 +613,18 @@ class SubhausController extends Controller
         //POST
         public function s_dosendemail(Request $request){
 			if($request != null){
-				//send email
-				
-				
+				$name = $request->get('name');
+                $email = $request->get('email');
+                $subject = $request->get('subject');
+                $msg = $request->get('message');
+
+                Mail::raw($msg, function($message) use ($name, $email, $subject){
+                    $message->from($email, $name);
+                    $message->to('subhaus@m16district.com');
+                    $message->subject($subject);
+                });
+
+                return redirect('/subhaus');
 			}
         }
     /*##############ADMIN PAGE [END]##############*/

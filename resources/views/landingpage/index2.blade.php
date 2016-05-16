@@ -133,24 +133,24 @@
 				</div>
 			</div>
 			<div class="row">
-				{{--<div class="col-sm-12 col-md-12 col-lg-12">
-					--}}{{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem elit, aliquet quis tempor a,--}}{{--
-						--}}{{--eleifend eu erat. Cras condimentum mattis lectus, id bibendum dui.--}}{{--
-						--}}{{--Donec sit amet euismod nibh. Morbi mattis ut est vel dictum.--}}{{--
-						--}}{{--Fusce suscipit ut velit eget luctus. Nullam leo elit, mattis et tristique ac, pulvinar non massa.--}}{{--
-						--}}{{--Sed accumsan sed ante sed dapibus.--}}{{--
-						--}}{{--Donec at tellus in dolor fermentum finibus elementum sit amet orci.--}}{{--
-						--}}{{--Curabitur imperdiet facilisis posuere. Vivamus malesuada tortor ut tellus tempus tincidunt. </p>--}}{{--
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem elit, aliquet quis tempor a,
+						eleifend eu erat. Cras condimentum mattis lectus, id bibendum dui.
+						Donec sit amet euismod nibh. Morbi mattis ut est vel dictum.
+						Fusce suscipit ut velit eget luctus. Nullam leo elit, mattis et tristique ac, pulvinar non massa.
+						Sed accumsan sed ante sed dapibus.
+						Donec at tellus in dolor fermentum finibus elementum sit amet orci.
+						Curabitur imperdiet facilisis posuere. Vivamus malesuada tortor ut tellus tempus tincidunt. </p>
 					@if(is_array($abouts) || is_object($abouts))
 						@foreach($abouts as $about)
-							<p style="font-family: '{{$about->fontfamily}}'; color: {{$about->color}}; font-size: {{$about->fontsize}}">
-								{{ $about->about }}
-							</p>
+							{{--<p style="font-family: '{{$about->fontfamily}}'; color: {{$about->color}}; font-size: {{$about->fontsize}}">--}}
+								{{--{{ $about->about }}--}}
+							{{--</p>--}}
 
 							<div class="social-icons">
 								<ul>
-									--}}{{--<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>--}}{{--
-									--}}{{--<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>--}}{{--
+									<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
 									@if($about->instagram != null || $about->instagram != '')
 										<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 									@endif
@@ -158,89 +158,89 @@
 							</div>
 						@endforeach
 					@endif
-				</div>--}}
+				</div>
 
-				<div class="feature-tab">
-					<div class="col-md-2 col-sm-3 col-xs-12">
-						<ul class="nav nav-tabs main-tab-list text-center" role="tablist">
-							<li role="presentation" class="active">
-								<a href="#m16district" role="tab" data-toggle="tab" >
-									<div class="single-tab">
-										<div class="f-icon">
-											<i class="fa fa-laptop"></i>
-										</div>
-									</div>
-									<h4>M16 District</h4>
-								</a>
-							</li>
-							<li role="presentation" >
-								<a href="#subhaus" role="tab" data-toggle="tab">
-									<div class="single-tab">
-										<div class="f-icon">
-											<i class="fa fa-send"></i>
-										</div>
-									</div>
-									<h4>Subhaus</h4>
-								</a>
-							</li>
-							<li role="presentation" >
-								<a href="#flux" role="tab" data-toggle="tab">
-									<div class="single-tab">
-										<div class="f-icon">
-											<i class="fa fa-heart"></i>
-										</div>
-									</div>
-									<h4>Flux</h4>
-								</a>
-							</li>
-							<li role="presentation" >
-								<a href="#pitst op" role="tab" data-toggle="tab">
-									<div class="single-tab">
-										<div class="f-icon">
-											<i class="fa fa-camera"></i>
-										</div>
-									</div>
-									<h4>Pitstop</h4>
-								</a>
-							</li>
-							<li role="presentation" >
-								<a href="#monroe" role="tab" data-toggle="tab">
-									<div class="single-tab">
-										<div class="f-icon">
-											<i class="fa fa-send"></i>
-										</div>
-									</div>
-									<h4>Monroe</h4>
-								</a>
-							</li>
-						</ul>
-					</div> <!-- close div col-md-2 col-sm-3 col-xs-12 -->
-					<div class="col-md-10 col-sm-9 col-xs-12">
-						<div class="tab-content main-tab-content">
-							@if(is_array($abouts) || is_object($abouts))
-								@foreach($abouts as $about)
-									<div role="tabpanel" class="tab-pane active " id="{{ $about->href }}">
-										<div class="col-md-12 col-sm-9">
-											<img src="{{ asset('landingpage_asset/images/L_aboutImages/'.$about->img) }}" style="height: 550px;width: 100%" alt="" class="img-responsive"/>
-										</div>
-										<div class="col-md-12 col-sm-9">
-											<div class="c-tab text-left">
-												<h4>{{ $about->title }}</h4>
+				{{--<div class="feature-tab">--}}
+					{{--<div class="col-md-2 col-sm-3 col-xs-12">--}}
+						{{--<ul class="nav nav-tabs main-tab-list text-center" role="tablist">--}}
+							{{--<li role="presentation" class="active">--}}
+								{{--<a href="#m16district" role="tab" data-toggle="tab" >--}}
+									{{--<div class="single-tab">--}}
+										{{--<div class="f-icon">--}}
+											{{--<i class="fa fa-laptop"></i>--}}
+										{{--</div>--}}
+									{{--</div>--}}
+									{{--<h4>M16 District</h4>--}}
+								{{--</a>--}}
+							{{--</li>--}}
+							{{--<li role="presentation" >--}}
+								{{--<a href="#subhaus" role="tab" data-toggle="tab">--}}
+									{{--<div class="single-tab">--}}
+										{{--<div class="f-icon">--}}
+											{{--<i class="fa fa-send"></i>--}}
+										{{--</div>--}}
+									{{--</div>--}}
+									{{--<h4>Subhaus</h4>--}}
+								{{--</a>--}}
+							{{--</li>--}}
+							{{--<li role="presentation" >--}}
+								{{--<a href="#flux" role="tab" data-toggle="tab">--}}
+									{{--<div class="single-tab">--}}
+										{{--<div class="f-icon">--}}
+											{{--<i class="fa fa-heart"></i>--}}
+										{{--</div>--}}
+									{{--</div>--}}
+									{{--<h4>Flux</h4>--}}
+								{{--</a>--}}
+							{{--</li>--}}
+							{{--<li role="presentation" >--}}
+								{{--<a href="#pitst op" role="tab" data-toggle="tab">--}}
+									{{--<div class="single-tab">--}}
+										{{--<div class="f-icon">--}}
+											{{--<i class="fa fa-camera"></i>--}}
+										{{--</div>--}}
+									{{--</div>--}}
+									{{--<h4>Pitstop</h4>--}}
+								{{--</a>--}}
+							{{--</li>--}}
+							{{--<li role="presentation" >--}}
+								{{--<a href="#monroe" role="tab" data-toggle="tab">--}}
+									{{--<div class="single-tab">--}}
+										{{--<div class="f-icon">--}}
+											{{--<i class="fa fa-send"></i>--}}
+										{{--</div>--}}
+									{{--</div>--}}
+									{{--<h4>Monroe</h4>--}}
+								{{--</a>--}}
+							{{--</li>--}}
+						{{--</ul>--}}
+					{{--</div> <!-- close div col-md-2 col-sm-3 col-xs-12 -->--}}
+					{{--<div class="col-md-10 col-sm-9 col-xs-12">--}}
+						{{--<div class="tab-content main-tab-content">--}}
+							{{--@if(is_array($abouts) || is_object($abouts))--}}
+								{{--@foreach($abouts as $about)--}}
+									{{--<div role="tabpanel" class="tab-pane active " id="{{ $about->href }}">--}}
+										{{--<div class="col-md-12 col-sm-9">--}}
+											{{--<img src="{{ asset('landingpage_asset/images/L_aboutImages/'.$about->img) }}" style="height: 550px;width: 100%" alt="" class="img-responsive"/>--}}
+										{{--</div>--}}
+										{{--<div class="col-md-12 col-sm-9">--}}
+											{{--<div class="c-tab text-left">--}}
+												{{--<h4>{{ $about->title }}</h4>--}}
 												{{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium dolore sequi excepturi recusandae reprehenderit, distinctio.</p>--}}
-												<span style="font-family: {{ $about->fontfamily }}; color: {{$about->color}}; ">
-													{{ $about->about }}
-												</span>
+												{{--<span style="font-family: {{ $about->fontfamily }}; color: {{$about->color}}; ">--}}
+													{{--{{ $about->about }}--}}
+												{{--</span>--}}
 												{{--<br>--}}
 												{{--<p>--}}
 													{{--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolorum, quisquam eum eaque. Excepturi nisi necessitatibus, inventore explicabo corporis expedita fugit aspernatur harum reprehenderit temporibus, pariatur esse laborum qui quisquam.--}}
 												{{--</p>--}}
-												<br>
-												<a href="{{ $about->url }}"> Learn More</a>
-											</div>
-										</div>
-									</div>
-								@endforeach
-							@endif
+												{{--<br>--}}
+												{{--<a href="{{ $about->url }}"> Learn More</a>--}}
+											{{--</div>--}}
+										{{--</div>--}}
+									{{--</div>--}}
+								{{--@endforeach--}}
+							{{--@endif--}}
 
 							{{--<div role="tabpanel" class="tab-pane" id="subhaus">--}}
 								{{--<div class="col-md-12 col-sm-9">--}}
@@ -310,9 +310,9 @@
 									{{--</div>--}}
 								{{--</div>--}}
 							{{--</div>--}}
-						</div>
-					</div>
-				</div>
+						{{--</div>--}}
+					{{--</div>--}}
+				{{--</div>--}}
 			</div>
 		</div>
 	</div>
