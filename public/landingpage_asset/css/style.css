@@ -341,7 +341,7 @@ left: calc(50% - 200px);
 	/*background-size: cover;*/
 	/*background-position: center;*/
 	/*background-attachment: fixed;*/
-	height: 1000px;
+	height: 500px;
 }
 
 /* ================ Location Section ================ */
@@ -390,6 +390,10 @@ left: calc(50% - 200px);
 }
 
 
+.imageBox{
+	border: solid #FFFFFF 1px;
+	border-radius: 12px;
+}
 
 
 

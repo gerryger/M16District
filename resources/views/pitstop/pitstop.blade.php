@@ -482,7 +482,7 @@
 									</div>
 
 									<div class="pitstop-item">
-									test6
+										<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/7031f3c018d55a35a27f279946d7ef18.html" id="lightwidget_7031f3c018" name="lightwidget_7031f3c018"  scrolling="yes" allowtransparency="true" class="lightwidget-widget" style="width: 100%; height: 100%; border: 0; overflow: auto;"></iframe>
 									</div>
 
 								</div>
@@ -499,27 +499,27 @@
 	</div>
 		
 	<!--=== events section Starts ===-->
-	<section id="section-events" class="events-wrap">
-		<div class="container events center">
-			<div class="row">
-				<div class="col-lg-12">
-					<h1>Events</h1>	
-				</div>
-			</div>
-		</div>
-	</section>
+	{{--<section id="section-events" class="events-wrap">--}}
+		{{--<div class="container events center">--}}
+			{{--<div class="row">--}}
+				{{--<div class="col-lg-12">--}}
+					{{--<h1>Events</h1>	--}}
+				{{--</div>--}}
+			{{--</div>--}}
+		{{--</div>--}}
+	{{--</section>--}}
 	<!--=== events section Ends ===-->
 	
 	<!--=== location section Starts ===-->
-	<section id="section-location" class="location-wrap">
-		<div class="container location center">
-			<div class="row">
-				<div class="col-lg-12">	
-					<h1>Location</h1>
-				</div>
-			</div>
-		</div>
-	</section>
+	{{--<section id="section-location" class="location-wrap">--}}
+		{{--<div class="container location center">--}}
+			{{--<div class="row">--}}
+				{{--<div class="col-lg-12">	--}}
+					{{--<h1>Location</h1>--}}
+				{{--</div>--}}
+			{{--</div>--}}
+		{{--</div>--}}
+	{{--</section>--}}
 	<!--=== location section Ends ===-->
 		
 	<!--=== Footer section Starts ===-->

@@ -15,13 +15,13 @@ $(window).ready(function() {
 	'use strict';
 	$.vegas('slideshow', {
 	  backgrounds:[
-		{ src:'images/pitstopAssets/bg-1.jpg', fade:1000 },
-		{ src:'images/pitstopAssets/bg-2.jpg', fade:1000 },
-		{ src:'images/pitstopAssets/bg-3.jpg', fade:1000 },
-		{ src:'images/pitstopAssets/bg-4.jpg', fade:1000 },
-		{ src:'images/pitstopAssets/bg-5.jpg', fade:1000 },
-		{ src:'images/pitstopAssets/bg-6.jpg', fade:1000 },
-		{ src:'images/pitstopAssets/bg-7.jpg', fade:1000 }
+		{ src:'pitstop_asset/images/bg-slider/bg-1.jpg', fade:1000 },
+		{ src:'pitstop_asset/images/bg-slider/bg-2.jpg', fade:1000 },
+		{ src:'pitstop_asset/images/bg-slider/bg-3.jpg', fade:1000 },
+		{ src:'pitstop_asset/images/bg-slider/bg-4.jpg', fade:1000 },
+		{ src:'pitstop_asset/images/bg-slider/bg-5.jpg', fade:1000 },
+		{ src:'pitstop_asset/images/bg-slider/bg-6.jpg', fade:1000 },
+		{ src:'pitstop_asset/images/bg-slider/bg-7.jpg', fade:1000 }
 	  ]
 	})();
 });
