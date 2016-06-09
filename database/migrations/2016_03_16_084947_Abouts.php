@@ -20,6 +20,14 @@ class Abouts extends Migration
             $table->string('color');
             $table->string('fontsize');
             $table->string('instagram');
+            $table->string('image1');
+            $table->string('caption_image1');
+            $table->string('image2');
+            $table->string('caption_image2');
+            $table->string('image3');
+            $table->string('caption_image3');
+            $table->string('image4');
+            $table->string('caption_image4');
             $table->timestamps();
         });
     }

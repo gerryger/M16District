@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class About extends Model
 {
-    protected $fillable = array('about', 'fontfamily', 'color', 'fontsize');
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 }

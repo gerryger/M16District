@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2016 at 11:18 AM
+-- Generation Time: Jun 09, 2016 at 02:24 PM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -34,6 +34,14 @@ CREATE TABLE IF NOT EXISTS `abouts` (
   `color` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `fontsize` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `instagram` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `caption_image1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `caption_image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `caption_image3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `caption_image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
@@ -42,8 +50,8 @@ CREATE TABLE IF NOT EXISTS `abouts` (
 -- Dumping data for table `abouts`
 --
 
-INSERT INTO `abouts` (`id`, `page`, `about`, `fontfamily`, `color`, `fontsize`, `instagram`, `created_at`, `updated_at`) VALUES
-(1, 'l', 'asdasdasdasdad', 'helvetica', '#0f0606', '', '', '2016-03-16 02:42:21', '2016-03-16 02:42:21');
+INSERT INTO `abouts` (`id`, `page`, `about`, `fontfamily`, `color`, `fontsize`, `instagram`, `image1`, `caption_image1`, `image2`, `caption_image2`, `image3`, `caption_image3`, `image4`, `caption_image4`, `created_at`, `updated_at`) VALUES
+(1, 'l', 'asdasdasdasdad', 'helvetica', '#0f0606', '', '', '', '', '', '', '', '', '', '', '2016-03-16 02:42:21', '2016-03-16 02:42:21');
 
 -- --------------------------------------------------------
 

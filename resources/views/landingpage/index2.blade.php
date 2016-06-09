@@ -32,6 +32,9 @@
 	<script type="text/javascript" src="{{ asset('landingpage_asset/js/bower_components/fullpage.js/dist/jquery.fullpage.min.js') }}"></script>
 	{{--<script type="text/javascript" src="{{ asset('landingpage_asset/js/bower_components/fullpage.js/vendors/jquery.easings.min.js') }}"></script>--}}
 
+	<!--=== lightbox ===-->
+	<link rel="stylesheet" href="{{ asset('landingpage_asset/bower_components/lightbox2/dist/css/lightbox.min.css') }}" />
+
 	<!--=== Internet explorer fix ===-->
 	<!-- [if lt IE 9]>
 		<script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -143,12 +146,16 @@
 						Curabitur imperdiet facilisis posuere. Vivamus malesuada tortor ut tellus tempus tincidunt. </p>
 
 					<div class="row">
-						<div class="col-sm-3 imageBox">
-							asd
+						<div class="col-sm-3 ">
+							<a class="lightbox-image-link" href="{{ asset('landingpage_asset/images/client_1.jpg') }}" data-lightbox="lightbox-image-set">
+								<img src="{{ asset('landingpage_asset/images/client_1.jpg') }}" class="lightbox-image" alt="image-1" />
+							</a>
 						</div>
 
-						<div class="col-sm-3 imageBox">
-							asd
+						<div class="col-sm-3 ">
+							<a class="lightbox-image-link" href="{{ asset('landingpage_asset/images/client_2.jpg') }}" data-lightbox="lightbox-image-set">
+								<img src="{{ asset('landingpage_asset/images/client_2.jpg') }}" class="lightbox-image" alt="image-2" />
+							</a>
 						</div>
 
 						<div class="col-sm-3 imageBox">
@@ -186,108 +193,7 @@
 	<div class="spaceBetweenSect"></div>
 		
 	<!--=== events section Starts ===-->
-	<div id="section-events" class="events-wrap section">
-		<div class="container events center">
-			<div class="row">
-				<div class="col-lg-12">
-					<h1>Events</h1>
-				</div>
-			</div>
-			<div class="row">
-				{{--<div class="col-sm-6 col-md-6 col-lg-6">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim ante, eleifend vel nisi vel,
-						pellentesque consectetur nunc. Curabitur elementum viverra bibendum. Donec ut magna neque.
-						Cras velit magna, luctus eget odio eu, posuere efficitur est.
-						Vestibulum euismod risus quis ex dapibus, id consequat turpis aliquet. Donec lobortis euismod enim at
-						placerat. Suspendisse maximus sit amet tortor eu sollicitudin. Sed at tristique orci,
-						id laoreet elit. Nam ut velit dolor. Fusce orci libero, vehicula a ante quis, ultricies mollis eros.
-						In placerat, urna eget feugiat viverra,
-						tellus tellus venenatis nisl, nec eleifend metus dui fringilla massa. </p>
-				</div>--}}
-				{{--<div class="col-lg-12 col-md-12">--}}
-					<!-- Indicators -->
-					<ol class="carousel-indicators" >
-						<?php $i = 0; ?>
-						@foreach($events as $event)
-							<li data-target="#carousel-example-generic" data-slide-to="{{ $i }}" class="<?php echo $i == 0 ? "active" : ""; ?>"></li>
-							<?php $i++; ?>
-						@endforeach
-					</ol>
 
-					{{-- Slider --}}
-					<div id="carousel-example-generic"  class="carousel slide" data-ride="carousel">
-						<?php $j = 0; ?>
-
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner" role="listbox">
-							@foreach($events as $event)
-							<div class="item <?php echo $j == 0 ? "active" : ""; ?>">
-								<div class="col-md-6 col-lg-6">
-									<div class="row text-left">
-										Event name : {{ $event->ev_name }}
-									</div>
-									<div class="row text-left">
-										Period : {{ $event->ev_start }} ~ {{ $event->ev_end }}
-									</div>
-									<div class="row text-left">
-										Desc :
-									</div>
-									<div class="row text-left">
-										<p>{{ $event->ev_desc }}  </p>
-									</div>
-								</div>
-
-								<div class="col-md-6 col-lg-6">
-									<img src="{{ asset('sbadmin/eventImages') }}/{{ $event->ev_img }}" style="width: 500px;height: 300px;" alt="image1">
-								</div>
-							</div>
-
-							<?php $j++; ?>
-
-							{{--<div class="item">--}}
-								{{--<div class="col-md-6 col-lg-6">--}}
-									{{--<div class="row text-left">--}}
-										{{--Event name : asd--}}
-									{{--</div>--}}
-									{{--<div class="row text-left">--}}
-										{{--Period : yyyyMMdd ~ yyyyMMDd--}}
-									{{--</div>--}}
-									{{--<div class="row text-left">--}}
-										{{--Desc :--}}
-									{{--</div>--}}
-									{{--<div class="row text-left">--}}
-										{{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim ante, eleifend vel nisi vel,--}}
-											{{--pellentesque consectetur nunc. Curabitur elementum viverra bibendum. Donec ut magna neque.--}}
-											{{--Cras velit magna, luctus eget odio eu, posuere efficitur est.--}}
-											{{--Vestibulum euismod risus quis ex dapibus, id consequat turpis aliquet. Donec lobortis euismod enim at--}}
-											{{--placerat. Suspendisse maximus sit amet tortor eu sollicitudin. Sed at tristique orci,--}}
-											{{--id laoreet elit. Nam ut velit dolor. Fusce orci libero, vehicula a ante quis, ultricies mollis eros.--}}
-											{{--In placerat, urna eget feugiat viverra,--}}
-											{{--tellus tellus venenatis nisl, nec eleifend metus dui fringilla massa. </p>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-
-								{{--<div class="col-md-6 col-lg-6">--}}
-									{{--<img src="{{ asset('landingpage_asset/images/2.jpg') }}" style="width: 500px;height: 300px;" alt="image2">--}}
-								{{--</div>--}}
-							{{--</div>--}}
-							@endforeach
-									<!-- Controls -->
-								<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-								<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								</a>
-						</div>
-
-					</div>
-				{{--</div>--}}
-			</div>
-		</div>
-	</div>
 	<!--=== events section Ends ===-->
 
 	<div class="spaceBetweenSect text-center">
@@ -353,6 +259,8 @@
 	<!--=== Footer section Ends ===-->
 
 	</div><!--=== fullPage Ends ===-->
+
+
 	
 <!--==== Js files ====-->
 <!--==== Essential files ====-->
@@ -376,8 +284,15 @@
 <script type="text/javascript" src="{{ asset('landingpage_asset/js/jquery.appear.js') }}"></script>
 <script type="text/javascript" src="{{ asset('landingpage_asset/js/jquery.fitvids.js') }}"></script>
 
+<!--==== Lightbox ====-->
+<script type="text/javascript" src="{{ asset('landingpage_asset/bower_components/lightbox2/dist/js/lightbox.min.js') }}"></script>
+
 <!--==== Custom Script files ====-->
 <script type="text/javascript" src="{{ asset('landingpage_asset/js/custom.js') }}"></script>
+
+<script type="text/javascript">
+
+</script>
 
 </body>
 </html>

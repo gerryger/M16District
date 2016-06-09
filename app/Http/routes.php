@@ -84,9 +84,11 @@ Route::group(['middleware' => ['web']], function () {
     //Landing Page[START]
 
         //About Us
-        Route::get('/aboutus', 'MainController@aboutus');
-        Route::post('/doaddaboutus', 'MainController@doaddaboutus');
-        Route::delete('/deleteabout/{about}', 'MainController@deleteabout');
+//        Route::get('/aboutus', 'MainController@aboutus');
+//        Route::post('/doaddaboutus', 'MainController@doaddaboutus');
+//        Route::delete('/deleteabout/{about}', 'MainController@deleteabout');
+
+        Route::get('/aboutus', 'LandingPageController@aboutus');
 
 
     //Landing Page[END]

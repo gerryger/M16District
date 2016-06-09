@@ -24,8 +24,17 @@ $(window).ready(function() {
 	})();
 });
 
-
-				
+/* -----------------------------
+ Lightbox
+ ----------------------------- */
+$(document).ready(function(e){
+	lightbox.option({
+		'alwaysShowNavOnTouchDevices': true,
+		'resizeDuration': 200,
+		'wrapAround': true,
+		'positionFromTop': 100
+	});
+});
 
 /* ----------------------------- 
 Scroll into viewPort Animation
@@ -53,18 +62,18 @@ $(document).ready(function() {
 NiceScroll
 ----------------------------- */	
 $(document).ready(function() {
-	$('#fullPage').fullpage();
-	//'use strict';
-    //$("html").niceScroll({
-	//	cursorcolor: '#E74C3C',
-	//	cursoropacitymin: '1',
-	//	cursorborder: '0px',
-	//	cursorborderradius: '0px',
-	//	cursorwidth: '5px',
-	//	cursorminheight: 60,
-	//	horizrailenabled: false,
-	//	zindex: 1090
-	//});
+	//$('#fullPage').fullpage();
+	'use strict';
+    $("html").niceScroll({
+		cursorcolor: '#E74C3C',
+		cursoropacitymin: '1',
+		cursorborder: '0px',
+		cursorborderradius: '0px',
+		cursorwidth: '5px',
+		cursorminheight: 60,
+		horizrailenabled: false,
+		zindex: 1090
+	});
   });
 
 /* ----------------------------- 

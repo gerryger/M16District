@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Event;
 use App\L_About;
+use App\About;
 
 class LandingPageController extends Controller
 {
@@ -16,4 +17,10 @@ class LandingPageController extends Controller
         //echo json_encode($abouts);
         return view('landingpage.index2', ['abouts' => $abouts, 'events' => $events]);
     }
+
+    /*================ADMIN PAGE [START]================*/
+    public function aboutus(){
+        return view('admin.landingpage.l_about_us', ['abouts'=>About::all()]);
+    }
+    /*================ADMIN PAGE [END]================*/
 }
