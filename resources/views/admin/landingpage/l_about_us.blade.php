@@ -60,7 +60,7 @@
             <!-- Display Validation Errors -->
             @include('common.errors')
 
-            {!! Form::open(array('id'=>'aboutusForm', 'url'=>'/doaddaboutus','class'=>'form-horizontal','files'=>'true')) !!}
+            {!! Form::open(array('id'=>'aboutusForm', 'url'=>'/addaboutus','class'=>'form-horizontal','files'=>'true')) !!}
                 {{--About--}}
                 <div class="form-group">
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
@@ -206,8 +206,8 @@
                 </div>
 
                 <div class="col-md-12 col-lg-12 text-right">
-                    <input value="Add" type="submit" id="btnAddAbout" name="btnAddAbout" class="btn btn-success" />
-                    <input value="Update" type="button" id="btnUpdateAbout" name="btnUpdateAbout" class="btn btn-primary" />
+                    <input value="Insert" type="submit" id="btnAddAbout" name="btnAddAbout" class="btn btn-success" />
+                    <input value="Update" type="submit" id="btnUpdateAbout" name="btnUpdateAbout" class="btn btn-primary" />
                     <input value="Cancel" type="button" id="btnCancel" name="btnCancel" class="btn btn-warning" />
                     <input value="Cancel Update" type="button" id="btnCancelUpdate" name="btnCancelUpdate" class="btn btn-warning" />
                 </div>

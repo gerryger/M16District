@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class About extends Model
+class L_about_us extends Model
 {
-    protected $table = 'abouts';
+    protected $table = 'l_about_us';
     protected $guarded = ['id', 'created_at', 'updated_at'];
 }

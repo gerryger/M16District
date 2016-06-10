@@ -387,7 +387,7 @@ class FluxController extends Controller
                     $product->created_by = $createdby;
 
                     //move image to server
-                    Image::make($request->file('image'))->resize(306,249)->save(public_path('flux_asset/images/ourproducts/'.$imgName))->destroy();
+                    Image::make($request->file('image'))->fit(306,249)->save(public_path('flux_asset/images/ourproducts/'.$imgName))->destroy();
 
                     $product->save();
 

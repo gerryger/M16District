@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2016 at 02:24 PM
+-- Generation Time: Jun 10, 2016 at 01:33 PM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -36,22 +36,19 @@ CREATE TABLE IF NOT EXISTS `abouts` (
   `instagram` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `caption_image1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `thumb_image1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `caption_image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `thumb_image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `caption_image3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `thumb_image3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `caption_image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `thumb_image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `abouts`
---
-
-INSERT INTO `abouts` (`id`, `page`, `about`, `fontfamily`, `color`, `fontsize`, `instagram`, `image1`, `caption_image1`, `image2`, `caption_image2`, `image3`, `caption_image3`, `image4`, `caption_image4`, `created_at`, `updated_at`) VALUES
-(1, 'l', 'asdasdasdasdad', 'helvetica', '#0f0606', '', '', '', '', '', '', '', '', '', '', '2016-03-16 02:42:21', '2016-03-16 02:42:21');
 
 -- --------------------------------------------------------
 
@@ -285,6 +282,42 @@ INSERT INTO `l_abouts` (`id`, `page`, `img`, `title`, `about`, `url`, `href`, `f
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `l_about_us`
+--
+
+CREATE TABLE IF NOT EXISTS `l_about_us` (
+`id` int(10) unsigned NOT NULL,
+  `about` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `fontfamily` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `color` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `fontsize` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `instagram` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `caption_image1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `thumb_image1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `caption_image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `thumb_image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `caption_image3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `thumb_image3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `caption_image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `thumb_image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `l_about_us`
+--
+
+INSERT INTO `l_about_us` (`id`, `about`, `fontfamily`, `color`, `fontsize`, `instagram`, `image1`, `caption_image1`, `thumb_image1`, `image2`, `caption_image2`, `thumb_image2`, `image3`, `caption_image3`, `thumb_image3`, `image4`, `caption_image4`, `thumb_image4`, `created_at`, `updated_at`) VALUES
+(1, 'aslhdbfksdfsdfdfsf', 'default', '#0f0606', '12', 'asdasd', 'l_about1_201606101465543512137.jpg', 'asdasd', 'l_about1_thumb_201606101465543512137.jpg', 'l_about2_201606101465543512137.jpg', 'asdasd', 'l_about2_thumb_201606101465543512137.jpg', 'l_about3_201606101465543512137.jpg', 'asdasdasd', 'l_about3_thumb_201606101465543512137.jpg', 'l_about4_201606101465543512137.jpg', 'asdasdasdasd', 'l_about4_thumb_201606101465543512137.jpg', '2016-06-10 00:25:29', '2016-06-10 00:25:29');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -315,7 +348,8 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2016_04_22_101337_create_subhaus_slider_table', 12),
 ('2016_04_23_030337_create_s_aboutus_table', 13),
 ('2016_04_23_232244_create_s_pricing_table', 14),
-('2016_05_09_034506_create_s_featured_dish', 15);
+('2016_05_09_034506_create_s_featured_dish', 15),
+('2016_06_10_071358_create_about_us_table_for_landingpage', 16);
 
 -- --------------------------------------------------------
 
@@ -509,6 +543,12 @@ ALTER TABLE `l_abouts`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `l_about_us`
+--
+ALTER TABLE `l_about_us`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
@@ -593,6 +633,11 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 ALTER TABLE `l_abouts`
 MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `l_about_us`
+--
+ALTER TABLE `l_about_us`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `s_abouts`
 --
