@@ -127,7 +127,7 @@
                         <label class="control-label" for="image1">Image 1</label>
                     </div>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        {!! Form::file('image1', null) !!}
+                        {!! Form::file('image1', array('class'=>'dropify', 'data-height'=>'300', 'data-max-file-size'=>'3M')) !!}
                     </div>
                 </div>
 
@@ -148,7 +148,7 @@
                         <label class="control-label" for="image2">Image 2</label>
                     </div>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        {!! Form::file('image2', null) !!}
+                        {!! Form::file('image2', array('class'=>'dropify', 'data-height'=>'300', 'data-max-file-size'=>'3M')) !!}
                     </div>
                 </div>
 
@@ -169,7 +169,7 @@
                         <label class="control-label" for="image3">Image 3</label>
                     </div>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        {!! Form::file('image3', null) !!}
+                        {!! Form::file('image3', array('class'=>'dropify', 'data-height'=>'300', 'data-max-file-size'=>'3M')) !!}
                     </div>
                 </div>
 
@@ -190,7 +190,7 @@
                         <label class="control-label" for="image4">Image 4</label>
                     </div>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        {!! Form::file('image4', null) !!}
+                        {!! Form::file('image4', array('class'=>'dropify', 'data-height'=>'300', 'data-max-file-size'=>'3M')) !!}
                     </div>
                 </div>
 
@@ -206,9 +206,10 @@
                 </div>
 
                 <div class="col-md-12 col-lg-12 text-right">
-                    <input value="Add Blog" type="submit" id="btnAddBlog" name="btnAddBlog" class="btn btn-success" />
-                    <input value="Update Blog" type="button" id="btnUpdateBlog" name="btnUpdateBlog" class="btn btn-primary" />
+                    <input value="Add" type="submit" id="btnAddAbout" name="btnAddAbout" class="btn btn-success" />
+                    <input value="Update" type="button" id="btnUpdateAbout" name="btnUpdateAbout" class="btn btn-primary" />
                     <input value="Cancel" type="button" id="btnCancel" name="btnCancel" class="btn btn-warning" />
+                    <input value="Cancel Update" type="button" id="btnCancelUpdate" name="btnCancelUpdate" class="btn btn-warning" />
                 </div>
             {!! Form::close() !!}
         </div>
@@ -217,7 +218,7 @@
 
     <script type="text/javascript">
         $(document).ready(function(e){
-
+            init();
         });
 
         function init(){
@@ -228,6 +229,14 @@
             $('#aboutusTable').dataTable({
                 'pageLength':10
             });
+
+            //init dropify
+            $('.dropify').dropify();
+
+            if($('#btnUpdateAbout').is(':visible') && $('#btnCancelUpdate').is(':visible')){
+                $('#btnUpdateAbout').hide();
+                $('#btnCancelUpdate').hide();
+            }
         }
     </script>
 @endsection

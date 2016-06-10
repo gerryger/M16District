@@ -58,7 +58,7 @@ return [
             'database'  => env('DB_DATABASE', 'm16'), //u125737924_m16
             'username'  => env('DB_USERNAME', 'root'),//u125737924_root
             'password'  => env('DB_PASSWORD', ''),//asdASD123!@#
-            //'unix_socket' => '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
+            'unix_socket' => '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

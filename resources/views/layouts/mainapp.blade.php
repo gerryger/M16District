@@ -89,13 +89,12 @@
     <script src="{{ asset('sbadmin/bower_components/datatables/media/js/dataTables.jqueryui.min.js') }}"></script>
     <script src="{{ asset('sbadmin/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
 
-    <!-- Bootstrap Validator -->
-
-    <script src="{{ asset('sbadmin/bootstrap-validator/bootstrapValidator.min.js') }}" type="text/javascript"></script>
-    {{--<script type="text/javascript" src="{{ asset('sbadmin/bootstrap-validator-master/dist/validator.min.js') }}"></script>--}}
-
     <!-- TinyMCE -->
     <script type="text/javascript" src="{{ asset('sbadmin/tinymce/tinymce.min.js') }}"></script>
+
+    <!-- Dropify -->
+    <link rel="stylesheet" href="{{ asset('landingpage_asset/bower_components/dropify/dist/css/dropify.min.css') }}" />
+    <script type="text/javascript" src="{{ asset('landingpage_asset/bower_components/dropify/dist/js/dropify.min.js') }}"></script>
 
 </head>
 <body>
