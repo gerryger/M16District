@@ -406,7 +406,7 @@ left: calc(50% - 200px);
 
 .lightbox-image{
 	border-radius: 4px;
-	width: 7rem;
+	/*width: 7rem;*/
 }
 
 

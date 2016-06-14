@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.7.1
+-- version 4.1.6
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 10, 2016 at 01:33 PM
--- Server version: 5.6.20
--- PHP Version: 5.5.15
+-- Host: localhost
+-- Generation Time: Jun 14, 2016 at 04:39 AM
+-- Server version: 5.6.16
+-- PHP Version: 5.5.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `abouts` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `page` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `about` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `fontfamily` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -47,8 +47,9 @@ CREATE TABLE IF NOT EXISTS `abouts` (
   `caption_image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `thumb_image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -57,13 +58,14 @@ CREATE TABLE IF NOT EXISTS `abouts` (
 --
 
 CREATE TABLE IF NOT EXISTS `admins` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `page` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
 
 --
@@ -86,14 +88,15 @@ INSERT INTO `admins` (`id`, `name`, `page`, `email`, `password`, `created_at`, `
 --
 
 CREATE TABLE IF NOT EXISTS `events` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ev_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `ev_page` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `ev_start` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `ev_end` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `ev_desc` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=21 ;
 
 --
@@ -126,14 +129,15 @@ INSERT INTO `events` (`id`, `ev_name`, `ev_page`, `ev_start`, `ev_end`, `ev_desc
 --
 
 CREATE TABLE IF NOT EXISTS `f_blogs` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `date` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_by` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
 
 --
@@ -154,14 +158,15 @@ INSERT INTO `f_blogs` (`id`, `title`, `description`, `image`, `date`, `created_b
 --
 
 CREATE TABLE IF NOT EXISTS `f_eventpromo` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `start` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `end` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
@@ -178,14 +183,15 @@ INSERT INTO `f_eventpromo` (`id`, `name`, `start`, `end`, `image`, `description`
 --
 
 CREATE TABLE IF NOT EXISTS `f_products` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `youtubelink` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_by` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
 
 --
@@ -204,7 +210,7 @@ INSERT INTO `f_products` (`id`, `name`, `image`, `youtubelink`, `description`, `
 --
 
 CREATE TABLE IF NOT EXISTS `f_services` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
@@ -214,7 +220,8 @@ CREATE TABLE IF NOT EXISTS `f_services` (
   `price_XL` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_by` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
@@ -232,11 +239,12 @@ INSERT INTO `f_services` (`id`, `name`, `image`, `description`, `price_S`, `pric
 --
 
 CREATE TABLE IF NOT EXISTS `f_sliders` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_by` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
 
 --
@@ -257,7 +265,7 @@ INSERT INTO `f_sliders` (`id`, `image`, `created_by`, `created_at`, `updated_at`
 --
 
 CREATE TABLE IF NOT EXISTS `l_abouts` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `page` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `img` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -269,7 +277,8 @@ CREATE TABLE IF NOT EXISTS `l_abouts` (
   `fontsize` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `instagram` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
@@ -286,8 +295,8 @@ INSERT INTO `l_abouts` (`id`, `page`, `img`, `title`, `about`, `url`, `href`, `f
 --
 
 CREATE TABLE IF NOT EXISTS `l_about_us` (
-`id` int(10) unsigned NOT NULL,
-  `about` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `about` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `fontfamily` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `color` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `fontsize` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -305,7 +314,8 @@ CREATE TABLE IF NOT EXISTS `l_about_us` (
   `caption_image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `thumb_image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
@@ -313,7 +323,7 @@ CREATE TABLE IF NOT EXISTS `l_about_us` (
 --
 
 INSERT INTO `l_about_us` (`id`, `about`, `fontfamily`, `color`, `fontsize`, `instagram`, `image1`, `caption_image1`, `thumb_image1`, `image2`, `caption_image2`, `thumb_image2`, `image3`, `caption_image3`, `thumb_image3`, `image4`, `caption_image4`, `thumb_image4`, `created_at`, `updated_at`) VALUES
-(1, 'aslhdbfksdfsdfdfsf', 'default', '#0f0606', '12', 'asdasd', 'l_about1_201606101465543512137.jpg', 'asdasd', 'l_about1_thumb_201606101465543512137.jpg', 'l_about2_201606101465543512137.jpg', 'asdasd', 'l_about2_thumb_201606101465543512137.jpg', 'l_about3_201606101465543512137.jpg', 'asdasdasd', 'l_about3_thumb_201606101465543512137.jpg', 'l_about4_201606101465543512137.jpg', 'asdasdasdasd', 'l_about4_thumb_201606101465543512137.jpg', '2016-06-10 00:25:29', '2016-06-10 00:25:29');
+(1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem elit, aliquet quis tempor a, eleifend eu erat. Cras condimentum mattis lectus, id bibendum dui. Donec sit amet euismod nibh. Morbi mattis ut est vel dictum. Fusce suscipit ut velit eget luctus. Nullam leo elit, mattis et tristique ac, pulvinar non massa. Sed accumsan sed ante sed dapibus. Donec at tellus in dolor fermentum finibus elementum sit amet orci. Curabitur imperdiet facilisis posuere. Vivamus malesuada tortor ut tellus tempus tincidunt. ', 'Raleway', '#ffffff', '14', 'asdasd', 'l_about1_201606101465543512137.jpg', 'asdasd', 'l_about1_thumb_201606101465543512137.jpg', 'l_about2_201606101465543512137.jpg', 'asdasd', 'l_about2_thumb_201606101465543512137.jpg', 'l_about3_201606101465543512137.jpg', 'asdasdasd', 'l_about3_thumb_201606101465543512137.jpg', 'l_about4_201606101465543512137.jpg', 'asdasdasdasd', 'l_about4_thumb_201606101465543512137.jpg', '2016-06-10 00:25:29', '2016-06-10 00:25:29');
 
 -- --------------------------------------------------------
 
@@ -360,7 +370,9 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 CREATE TABLE IF NOT EXISTS `password_resets` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  KEY `password_resets_email_index` (`email`),
+  KEY `password_resets_token_index` (`token`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -370,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
 --
 
 CREATE TABLE IF NOT EXISTS `s_abouts` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `about` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -378,7 +390,8 @@ CREATE TABLE IF NOT EXISTS `s_abouts` (
   `image4` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_by` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
@@ -395,7 +408,7 @@ INSERT INTO `s_abouts` (`id`, `about`, `image1`, `image2`, `image3`, `image4`, `
 --
 
 CREATE TABLE IF NOT EXISTS `s_featured_dish` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `category` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `heading1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `heading2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -405,7 +418,8 @@ CREATE TABLE IF NOT EXISTS `s_featured_dish` (
   `image3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_by` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
@@ -424,14 +438,15 @@ INSERT INTO `s_featured_dish` (`id`, `category`, `heading1`, `heading2`, `descri
 --
 
 CREATE TABLE IF NOT EXISTS `s_pricings` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `price` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `category` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_by` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
 
 --
@@ -450,14 +465,15 @@ INSERT INTO `s_pricings` (`id`, `name`, `price`, `category`, `image`, `created_b
 --
 
 CREATE TABLE IF NOT EXISTS `s_sliders` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `heading` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `headingColor` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_by` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
 
 --
@@ -475,194 +491,17 @@ INSERT INTO `s_sliders` (`id`, `image`, `image2`, `heading`, `headingColor`, `cr
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
-`id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `abouts`
---
-ALTER TABLE `abouts`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `admins`
---
-ALTER TABLE `admins`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `events`
---
-ALTER TABLE `events`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `f_blogs`
---
-ALTER TABLE `f_blogs`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `f_eventpromo`
---
-ALTER TABLE `f_eventpromo`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `f_products`
---
-ALTER TABLE `f_products`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `f_services`
---
-ALTER TABLE `f_services`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `f_sliders`
---
-ALTER TABLE `f_sliders`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `l_abouts`
---
-ALTER TABLE `l_abouts`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `l_about_us`
---
-ALTER TABLE `l_about_us`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `password_resets`
---
-ALTER TABLE `password_resets`
- ADD KEY `password_resets_email_index` (`email`), ADD KEY `password_resets_token_index` (`token`);
-
---
--- Indexes for table `s_abouts`
---
-ALTER TABLE `s_abouts`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `s_featured_dish`
---
-ALTER TABLE `s_featured_dish`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `s_pricings`
---
-ALTER TABLE `s_pricings`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `s_sliders`
---
-ALTER TABLE `s_sliders`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `users_email_unique` (`email`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `abouts`
---
-ALTER TABLE `abouts`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `admins`
---
-ALTER TABLE `admins`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT for table `events`
---
-ALTER TABLE `events`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
---
--- AUTO_INCREMENT for table `f_blogs`
---
-ALTER TABLE `f_blogs`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
---
--- AUTO_INCREMENT for table `f_eventpromo`
---
-ALTER TABLE `f_eventpromo`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `f_products`
---
-ALTER TABLE `f_products`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT for table `f_services`
---
-ALTER TABLE `f_services`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT for table `f_sliders`
---
-ALTER TABLE `f_sliders`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT for table `l_abouts`
---
-ALTER TABLE `l_abouts`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `l_about_us`
---
-ALTER TABLE `l_about_us`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `s_abouts`
---
-ALTER TABLE `s_abouts`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `s_featured_dish`
---
-ALTER TABLE `s_featured_dish`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT for table `s_pricings`
---
-ALTER TABLE `s_pricings`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `s_sliders`
---
-ALTER TABLE `s_sliders`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

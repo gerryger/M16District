@@ -85,8 +85,7 @@ Route::group(['middleware' => ['web']], function () {
 
         //About Us
         Route::post('/addaboutus', 'LandingPageController@doaddaboutus');
-//        Route::delete('/deleteabout/{about}', 'MainController@deleteabout');
-
+        Route::delete('/aboutus/{about}', 'LandingPageController@dodeleteabout');
         Route::get('/aboutus', 'LandingPageController@aboutus');
 
 

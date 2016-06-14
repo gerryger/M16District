@@ -137,48 +137,52 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-12">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem elit, aliquet quis tempor a,
-						eleifend eu erat. Cras condimentum mattis lectus, id bibendum dui.
-						Donec sit amet euismod nibh. Morbi mattis ut est vel dictum.
-						Fusce suscipit ut velit eget luctus. Nullam leo elit, mattis et tristique ac, pulvinar non massa.
-						Sed accumsan sed ante sed dapibus.
-						Donec at tellus in dolor fermentum finibus elementum sit amet orci.
-						Curabitur imperdiet facilisis posuere. Vivamus malesuada tortor ut tellus tempus tincidunt. </p>
-
-					<div class="row">
-						<div class="col-sm-3 ">
-							<a class="lightbox-image-link" href="{{ asset('landingpage_asset/images/client_1.jpg') }}" data-lightbox="lightbox-image-set">
-								<img src="{{ asset('landingpage_asset/images/client_1.jpg') }}" class="lightbox-image" alt="image-1" />
-							</a>
-						</div>
-
-						<div class="col-sm-3 ">
-							<a class="lightbox-image-link" href="{{ asset('landingpage_asset/images/client_2.jpg') }}" data-lightbox="lightbox-image-set">
-								<img src="{{ asset('landingpage_asset/images/client_2.jpg') }}" class="lightbox-image" alt="image-2" />
-							</a>
-						</div>
-
-						<div class="col-sm-3 imageBox">
-							asd
-						</div>
-
-						<div class="col-sm-3 imageBox">
-							asd
-						</div>
-					</div>
-					<br/>
 					@if(is_array($abouts) || is_object($abouts))
 						@foreach($abouts as $about)
-							{{--<p style="font-family: '{{$about->fontfamily}}'; color: {{$about->color}}; font-size: {{$about->fontsize}}">--}}
-								{{--{{ $about->about }}--}}
-							{{--</p>--}}
+					{{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem elit, aliquet quis tempor a,--}}
+						{{--eleifend eu erat. Cras condimentum mattis lectus, id bibendum dui.--}}
+						{{--Donec sit amet euismod nibh. Morbi mattis ut est vel dictum.--}}
+						{{--Fusce suscipit ut velit eget luctus. Nullam leo elit, mattis et tristique ac, pulvinar non massa.--}}
+						{{--Sed accumsan sed ante sed dapibus.--}}
+						{{--Donec at tellus in dolor fermentum finibus elementum sit amet orci.--}}
+						{{--Curabitur imperdiet facilisis posuere. Vivamus malesuada tortor ut tellus tempus tincidunt. </p>--}}
 
+							<p style="font-family: '{{$about->fontfamily}}'; color: {{$about->color}}; font-size: {{$about->fontsize}}">
+							{{ $about->about }}
+							</p>
+
+							<div class="row">
+								<div class="col-sm-3 ">
+									<a class="lightbox-image-link" href="{{ asset('landingpage_asset/images/about/'.$about->image1) }}" data-lightbox="lightbox-image-set" data-title="{{ $about->caption_image1 }}">
+										<img src="{{ asset('landingpage_asset/images/about/thumbnail/'.$about->thumb_image1) }}" class="lightbox-image" alt="image-1" />
+									</a>
+								</div>
+
+								<div class="col-sm-3 ">
+									<a class="lightbox-image-link" href="{{ asset('landingpage_asset/images/about/'.$about->image2) }}" data-lightbox="lightbox-image-set" data-title="{{ $about->caption_image2 }}">
+										<img src="{{ asset('landingpage_asset/images/about/thumbnail/'.$about->thumb_image2) }}" class="lightbox-image" alt="image-2" />
+									</a>
+								</div>
+
+								<div class="col-sm-3 imageBox">
+									<a class="lightbox-image-link" href="{{ asset('landingpage_asset/images/about/'.$about->image3) }}" data-lightbox="lightbox-image-set" data-title="{{ $about->caption_image3 }}">
+										<img src="{{ asset('landingpage_asset/images/about/thumbnail/'.$about->thumb_image3) }}" class="lightbox-image" alt="image-3" />
+									</a>
+								</div>
+
+								<div class="col-sm-3 imageBox">
+									<a class="lightbox-image-link" href="{{ asset('landingpage_asset/images/about/'.$about->image4) }}" data-lightbox="lightbox-image-set" data-title="{{ $about->caption_image4 }}">
+										<img src="{{ asset('landingpage_asset/images/about/thumbnail/'.$about->thumb_image4) }}" class="lightbox-image" alt="image-4" />
+									</a>
+								</div>
+							</div>
+							<br/>
 							<div class="social-icons">
 								<ul>
-									<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+									{{--<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>--}}
+									{{--<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>--}}
 									@if($about->instagram != null || $about->instagram != '')
-										<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="{{$about->instagram }}"><i class="fa fa-instagram"></i></a></li>
 									@endif
 								</ul>
 							</div>
