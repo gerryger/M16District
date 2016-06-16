@@ -107,7 +107,7 @@
 							<a href="{{ url('/flux') }}">
 								<img src="{{ asset('landingpage_asset/images/_fluxLogo.png') }}">
 							</a>		
-							<a href="#">		
+							<a href="{{ url('/monroe') }}">
 								<img src="{{ asset('landingpage_asset/images/_monroeLogo.png') }}">
 							</a>
 							<br><br>

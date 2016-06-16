@@ -1,0 +1,81 @@
+.monroe-bg{
+	background-color: #000000;
+}
+
+.monroe-main{
+	margin-top: 100px;
+}
+
+.monroe-logo{
+	margin-bottom: 30px;
+}
+
+.monroe-about{
+	margin-bottom: 50px;
+}
+
+.monroe-about-text{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.barber-grid{
+	padding-top: 25px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.barber-img{
+	padding-right: 5px;
+ 	height: 250px;
+ 	background: url(../images/monroe-services.jpg) center;
+ 	background-size: cover;
+}
+
+.barber-price{
+	height: 250px;
+	background-color:#000000;
+}
+
+.shop-grid{
+	padding-top: 25px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.shop-img{
+	padding-right: 5px;
+ 	height: 250px;
+ 	background: url(../images/monroe-products.jpg) center;
+ 	background-size: cover;
+}
+
+.shop-price{
+	height: 250px;
+	background-color:#000000;
+}
+
+.monroe-desc{
+	margin-top: 25px;
+}
+
+.contact-grid{
+	padding-top: 25px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.contact-img{
+	padding-right: 5px;
+ 	height: 250px;
+ 	background: url(../images/monroe-owner.jpg) center;
+ 	background-size: cover;
+}
+
+.contact-desc{
+	height: 250px;
+	background-color:#000000;
+}
+
+
+

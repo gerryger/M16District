@@ -59,6 +59,9 @@ Route::group(['middleware' => ['web']], function () {
     //Pitstop
     Route::get('/pitstop', 'PitstopController@index');
 
+    //Monroe
+    Route::get('/monroe', 'MonroeController@index');
+
     //Routes for front end page [END]
 
 
