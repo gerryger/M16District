@@ -93,7 +93,7 @@
 			{{--<div class="section-overlay"></div>--}}
 			<div class="container home">
 				<div class="row">
-					<h1 class="well-come"><img src="{{ asset('landingpage_asset/images/_m16logo.png') }}"></h1>
+					<h1 class="well-come"><img src="{{ asset('landingpage_asset/images/_m16Logo.png') }}"></h1>
 					
 					<div class="col-md-12">
 						<p class="intro-message">
