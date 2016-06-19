@@ -13,7 +13,7 @@
 	<!--=== Google Fonts ===-->
 	<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:600,400,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:900,800,600,400,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
 	<!--=== Other CSS files ===-->
@@ -105,8 +105,8 @@
 						</div>
 
 						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12">
-								<div class="col-sm-9 col-md-9">						
+							<div class="col-xs-12 col-sm-12 col-md-12 no-padding">
+								<div class="col-sm-9 col-md-9">
 									<div id="wowslider-container1">
 									<div class="ws_images"><ul>
 											<li><img src="{{asset('monroe_asset/monroe-engine-slider1/images/slide1.jpg')}}" alt="slide1" title="slide1" id="wows1_0"/></li>
@@ -117,64 +117,91 @@
 									</div>	
 								</div>
 								<div class="col-sm-3 col-md-3">
-									<h5><b>Opening Time</b></h5>
-									<br>
-									<p><b>Sunday</b></p>
-									<p>10.00 AM - 5.00 PM</p>
-									<br>
-									<p><b>Monday&nbsp-&nbspSaturday</b></p>
-									<p>9.00 AM - 9.00 PM</p>
+									<div class="mrwhite-box">
+										<h5>Opening Time</h5>
+										<br>
+										<p><b>Sunday</b></p>
+										<p>10.00 AM - 5.00 PM</p>
+										<br>
+										<p><b>Monday&nbsp-&nbspSaturday</b></p>
+										<p>9.00 AM - 9.00 PM</p>
+									</div>
+
 								</div>
 							</div>
 						</div>
 
 						<div class="row">
-							<div class="col-md-12 barber-grid">
-								<div class="col-md-6 barber-img">
-
+							<div class="col-md-12 monr-grid no-padding">
+								<div class="col-md-6 monr-img">
+									<div class="inner-img"></div>
 								</div>
 								<div class="col-md-6 barber-price left">
-									<h5> <b>Our Services</b></h5>
+									<div class="mrblack-box h320">
+										<h5>our service</h5>
+										<div class="content-text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laudantium libero repellendus tempora voluptatibus! Deserunt dolor eaque, est excepturi iure molestiae odio porro provident qui sequi similique sit sunt unde.</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="row">
-							<div class="col-md-12 shop-grid">
+							<div class="col-md-12 monr-grid no-padding">
+								<div class="col-md-6 monr-img">
+									<div class="inner-img"></div>
+								</div>
 								<div class="col-md-6 shop-price left">
-									<h5> <b>Our Products</b></h5>
-								</div>
-								<div class="col-md-6 shop-img">
-								
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-md-12 monroe-desc">
-								<div class="col-md-3">
-									<h5><b>Monroe</b></h5>
-									<h6>Berberia</h6>		
-								</div>
-								<div class="col-md-3">
-									<img src="{{asset('monroe_asset/images/barber-lamp.jpg')}}"/>
-								</div>
-								<div class="col-md-3">
-									<h5><b>Visit Us</b></h5>
-								</div>
-								<div class="col-md-3">
-									<img src="{{asset('monroe_asset/images/scissors-combscrop.jpg')}}"/>
+									<div class="mrblack-box h320">
+										<h5>our product</h5>
+										<div class="content-text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laudantium libero repellendus tempora voluptatibus! Deserunt dolor eaque, est excepturi iure molestiae odio porro provident qui sequi similique sit sunt unde.</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="row">
-							<div class="col-md-12 contact-grid">
+							<div class="col-md-12 monroe-desc no-padding">
+								<div class="col-md-3">
+									<div class="mrwhite-box">
+										<h5>our product</h5>
+										<div class="content-text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laudantium libero repellendus tempora voluptatibus! Deserunt dolor eaque, est excepturi iure molestiae odio porro provident qui sequi similique sit sunt unde.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<img class="mbl-img" src="{{asset('monroe_asset/images/barber-lamp.jpg')}}"/>
+								</div>
+								<div class="col-md-3">
+									<div class="mrblack-box">
+										<h5>our product</h5>
+										<div class="content-text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laudantium libero repellendus tempora voluptatibus! Deserunt dolor eaque, est excepturi iure molestiae odio porro provident qui sequi similique sit sunt unde.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<img class="mbl-img" src="{{asset('monroe_asset/images/scissors-combscrop.jpg')}}"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 monr-grid no-padding">
+								<div class="col-md-6 monr-img">
+									<div class="inner-img"></div>
+								</div>
 								<div class="col-md-6 contact-desc left">
-									<h5> <b>Contact Us</b></h5>
-								</div>
-								<div class="col-md-6 contact-img">
-								
+									<div class="mrblack-box h320">
+										<h5>our product</h5>
+										<div class="content-text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laudantium libero repellendus tempora voluptatibus! Deserunt dolor eaque, est excepturi iure molestiae odio porro provident qui sequi similique sit sunt unde.</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -264,6 +291,8 @@
 <script type="text/javascript" src="{{ asset('monroe_asset/js/_monroe.js') }}"></script>
 <script type="text/javascript" src="{{ asset('monroe_asset/monroe-engine-slider1/wowslider.js') }}"></script>
 <script type="text/javascript" src="{{ asset('monroe_asset/monroe-engine-slider1/script.js') }}"></script>
+
+
 
 </body>
 </html>

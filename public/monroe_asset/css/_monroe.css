@@ -1,5 +1,96 @@
+.no-padding{
+	padding:0px !important;
+}
+
+.no-paddingleft{
+	padding-left: 0px !important;
+}
+.no-paddingright{
+	padding-right: 0px !important;
+}
+
+.h320{
+	height:320px;
+}
+
+h5{
+	margin:0px 0px 20px;
+	font-family:Raleway;
+	font-weight: 800;
+	font-size:18px;
+	text-transform: uppercase;
+}
+
+.mrwhite-box{
+	width:100%;
+	padding:16px;
+	background-color:#fff;
+}
+
+.mrwhite-box h5{
+	color:#444;
+}
+
+.mrwhite-box p{
+	font-family:Raleway;
+	color:#444;
+	margin: 0px 0px 20px;
+}
+
+.mrblack-box{
+	width:100%;
+	padding:16px;
+	background-color:#222;
+}
+
+.mrblack-box h5{
+	color:#fff;
+}
+
+.mrblack-box p{
+	font-family:Raleway;
+	color: #fff;
+}
+
+.mrblack-box .content-text, .mrwhite-box .content-text{
+	min-height: 100px;
+}
+
+.mrblack-box .content-text p{
+	font-family:Raleway;
+	color: #fff;
+}
+
+.mrwhite-box .content-text p{
+	font-family:Raleway;
+	color: #444;
+}
+
+.monr-grid{
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+#header .sticky-section.nav-bg{
+	background-color:#fff !important;
+	-webkit-box-shadow: 0px 0px 5px #aaa;
+	-moz-box-shadow:0px 0px 5px #aaa;
+	box-shadow: 0px 0px 5px #aaa;
+}
+
+#header .sticky-section.nav-bg ul li a{
+	color:#444;
+}
+
+#header .sticky-section.nav-bg ul li.current a{
+	color:#444 !important;
+	font-weight:800;
+}
+
+
+
 .monroe-bg{
-	background-color: #000000;
+	background-color: #111;
 }
 
 .monroe-main{
@@ -19,12 +110,6 @@
 	padding-left: 5px;
 }
 
-.barber-grid{
-	padding-top: 25px;
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
 .barber-img{
 	padding-right: 5px;
  	height: 250px;
@@ -37,17 +122,18 @@
 	background-color:#000000;
 }
 
-.shop-grid{
-	padding-top: 25px;
-	padding-left: 30px;
-	padding-right: 30px;
-}
 
-.shop-img{
+.monr-img{
+	height:320px;
+	overflow:hidden;
+}
+.monr-img .inner-img{
 	padding-right: 5px;
- 	height: 250px;
- 	background: url(../images/monroe-products.jpg) center;
+	background-image: url(../images/monroe-services.jpg);
  	background-size: cover;
+	background-position: center;
+	width:100%;
+	height:100%;
 }
 
 .shop-price{
@@ -57,12 +143,6 @@
 
 .monroe-desc{
 	margin-top: 25px;
-}
-
-.contact-grid{
-	padding-top: 25px;
-	padding-left: 30px;
-	padding-right: 30px;
 }
 
 .contact-img{
@@ -75,6 +155,15 @@
 .contact-desc{
 	height: 250px;
 	background-color:#000000;
+}
+
+@media(max-width:992px){
+	.mbl-img{
+		width:100%;
+	}
+	.mrwhite-box h5, .mrwhite-box .content-text, .mrblack-box .content-text, .mrblack-box h5{
+		padding:0px 15px;
+	}
 }
 
 
