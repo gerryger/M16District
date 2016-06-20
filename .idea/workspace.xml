@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b997c0aa-43b7-4832-adfe-9d3a9afdfe90" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/flux/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/flux/index.blade.php" />
     </list>
     <ignored path="m16district.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,22 +75,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24226804">
-              <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+            <state vertical-scroll-proportion="-5.875">
+              <caret line="60" column="83" selection-start-line="60" selection-start-column="83" selection-end-line="60" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/flux/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.125">
-              <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
-              <folding />
+            <state vertical-scroll-proportion="0.46391752">
+              <caret line="53" column="215" selection-start-line="53" selection-start-column="215" selection-end-line="53" selection-end-column="215" />
+              <folding>
+                <element signature="e#890#923#0#HTML" expanded="true" />
+                <element signature="e#3368#3419#0#HTML" expanded="true" />
+                <element signature="e#3567#3618#0#HTML" expanded="true" />
+                <element signature="e#3787#3838#0#HTML" expanded="true" />
+                <element signature="e#4112#4163#0#HTML" expanded="true" />
+                <element signature="e#4330#4381#0#HTML" expanded="true" />
+                <element signature="e#4553#4604#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,8 +144,8 @@
         <option value="$PROJECT_DIR$/resources/views/monroe/monroe.blade.php" />
         <option value="$PROJECT_DIR$/public/landingpage_asset/css/style.css" />
         <option value="$PROJECT_DIR$/public/flux_asset/css/style.css" />
-        <option value="$PROJECT_DIR$/resources/views/flux/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/flux/layout.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/flux/index.blade.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
       </list>
     </option>
@@ -883,14 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/flux/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.125">
-          <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/flux/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.7058825">
@@ -901,9 +902,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24226804">
-          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+        <state vertical-scroll-proportion="-5.875">
+          <caret line="60" column="83" selection-start-line="60" selection-start-column="83" selection-end-line="60" selection-end-column="83" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/flux/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46391752">
+          <caret line="53" column="215" selection-start-line="53" selection-start-column="215" selection-end-line="53" selection-end-column="215" />
+          <folding>
+            <element signature="e#890#923#0#HTML" expanded="true" />
+            <element signature="e#3368#3419#0#HTML" expanded="true" />
+            <element signature="e#3567#3618#0#HTML" expanded="true" />
+            <element signature="e#3787#3838#0#HTML" expanded="true" />
+            <element signature="e#4112#4163#0#HTML" expanded="true" />
+            <element signature="e#4330#4381#0#HTML" expanded="true" />
+            <element signature="e#4553#4604#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

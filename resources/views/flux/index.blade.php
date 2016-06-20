@@ -14,7 +14,7 @@
                                         <div class="blog-leftgrids">
                                             <div class="image group">
                                                 <div class="grid images_3_of_1">
-                                                    <a href="#"><img src="{{ asset('flux_asset/images/blog/'.$blog->image) }}" style="min-height: 100%"  alt="" /></a>
+                                                    <a href="#"><img src="{{ asset('flux_asset/images/blog/'.$blog->image) }}" style="widtht: 100%;height: auto"  alt="" /></a>
                                                 </div>
                                                 <div class="grid blog-desc">
                                                     <h3><a href="{{ url('/flux/blog/'.$blog->id) }}">{{ $blog->title }} </a></h3>
@@ -43,15 +43,15 @@
                         <div class="col-sm-4 col-md-4 col-lg-4">
                             <h2>Our Products</h2>
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <a href="http://www.meguiars.com/international" target="_blank"><img src="{{ asset('flux_asset/images/product/meguiars-logo.png') }}" style="min-height: 100%;min-width: 100%;margin-top: 20px" /></a>
-                                <a href="http://www.3m.com" target="_blank"><img src="{{ asset('flux_asset/images/product/3m-logo.png') }}" style="min-height: 100%;min-width: 100%;margin-top: 20px" /></a>
-                                <a href="http://www.chemicalguys.com" target="_blank"><img src="{{ asset('flux_asset/images/product/chemical-guys-logo.png') }}" style="min-height: 100%;min-width: 100%;margin-top: 20px" /></a>
+                                <a href="http://www.meguiars.com/international" target="_blank"><img src="{{ asset('flux_asset/images/product/meguiars-logo.png') }}" style="widtht: 100%;height: auto; margin-top: 20px" /></a>
+                                <a href="http://www.3m.com" target="_blank"><img src="{{ asset('flux_asset/images/product/3m-logo.png') }}" style="widtht: 100%;height: auto; margin-top: 20px" /></a>
+                                <a href="http://www.chemicalguys.com" target="_blank"><img src="{{ asset('flux_asset/images/product/chemical-guys-logo.png') }}" style="widtht: 100%;height: auto; margin-top: 20px" /></a>
                             </div>
 
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <a href="http://www.gyeonquartz.com" target="_blank"><img src="{{ asset('flux_asset/images/product/gyeon-logo.png') }}" style="min-height: 100%;min-width: 100%;margin-top: 20px" /></a>
-                                <a href="http://www.soft99.co.jp/english/" target="_blank"><img src="{{ asset('flux_asset/images/product/soft99-logo.png') }}" style="min-height: 100%;min-width: 100%;margin-top: 20px" /></a>
-                                <a href="http://https://www.turtlewax.com/" target="_blank"><img src="{{ asset('flux_asset/images/product/turtle-wax-logo.png') }}" style="min-height: 100%;min-width: 100%;margin-top: 20px" /></a>
+                                <a href="http://www.gyeonquartz.com" target="_blank"><img src="{{ asset('flux_asset/images/product/gyeon-logo.png') }}" style="widtht: 100%;height: auto; margin-top: 20px" /></a>
+                                <a href="http://www.soft99.co.jp/english/" target="_blank"><img src="{{ asset('flux_asset/images/product/soft99-logo.png') }}" style="widtht: 100%;height: auto; margin-top: 20px" /></a>
+                                <a href="http://https://www.turtlewax.com/" target="_blank"><img src="{{ asset('flux_asset/images/product/turtle-wax-logo.png') }}" style="widtht: 100%;height: auto; margin-top: 20px" /></a>
                             </div>
                         </div>
                     </div>
