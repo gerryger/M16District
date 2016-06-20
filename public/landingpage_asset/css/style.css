@@ -333,6 +333,7 @@ left: calc(50% - 200px);
 
 .spaceBetweenSect{
 	background: rgba(0, 0, 0, .7) !important;
+	background-size: cover;
 	height: 200px;
 }
 
