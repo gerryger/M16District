@@ -52,13 +52,28 @@ return [
             'prefix'   => '',
         ],
 
+        //devel
+//        'mysql' => [
+//            'driver'    => 'mysql',
+//            'host'      => env('DB_HOST', 'localhost'),//mysql.idhostinger.com
+//            'database'  => env('DB_DATABASE', 'm16'), //u125737924_m16
+//            'username'  => env('DB_USERNAME', 'root'),//u125737924_root
+//            'password'  => env('DB_PASSWORD', ''),//asdASD123!@#
+//            'unix_socket' => '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
+//            'charset'   => 'utf8',
+//            'collation' => 'utf8_unicode_ci',
+//            'prefix'    => '',
+//            'strict'    => false,
+//            'engine'    => null,
+//        ],
+
+        //deploy
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),//mysql.idhostinger.com
-            'database'  => env('DB_DATABASE', 'm16'), //u125737924_m16
-            'username'  => env('DB_USERNAME', 'root'),//u125737924_root
-            'password'  => env('DB_PASSWORD', ''),//asdASD123!@#
-            'unix_socket' => '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
+            'host'      => env('DB_HOST', 'mysql.idhostinger.com'),//mysql.idhostinger.com
+            'database'  => env('DB_DATABASE', 'u125737924_m16'), //u125737924_m16
+            'username'  => env('DB_USERNAME', 'u125737924_root'),//u125737924_root
+            'password'  => env('DB_PASSWORD', 'asdASD123!@#'),//asdASD123!@#
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
