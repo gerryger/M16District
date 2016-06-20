@@ -320,12 +320,14 @@ left: calc(50% - 200px);
 /* ================ Home Section ================ */
 #section-home {
 	background: rgba(0, 0, 0, .7) !important;
+	background-size: cover;
 	height: 500px;
 }
 
 /* ================ Events Section ================ */
 #section-events {
 	background: rgba(0, 0, 0, .7) !important;
+	background-size: cover;
 	height: 700px;
 }
 
@@ -342,12 +344,20 @@ left: calc(50% - 200px);
 	/*background-position: center;*/
 	/*background-attachment: fixed;*/
 	/*height: 1350px;*/
+	background-size: cover;
 	height: 550px;
 }
 
 @media(max-width: 992px) {
+	#section-home {
+		background: rgba(0, 0, 0, .7) !important;
+		background-size: cover;
+		height: 600px;
+	}
+
 	#section-aboutus {
 		background: rgba(0, 0, 0, .7) !important;
+		background-size: cover;
 		height: 1350px;
 	}
 }
@@ -355,11 +365,13 @@ left: calc(50% - 200px);
 /* ================ Location Section ================ */
 #section-location {
 	background: rgba(0, 0, 0, .7) !important;
+	background-size: cover;
 }
 
 /* ================ Footer Section ================ */
 #section-footer {
 	background: rgba(0, 0, 0, .7) !important;
+	background-size: cover;
 }
 
 .footer-title {
