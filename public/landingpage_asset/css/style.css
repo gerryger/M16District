@@ -341,7 +341,15 @@ left: calc(50% - 200px);
 	/*background-size: cover;*/
 	/*background-position: center;*/
 	/*background-attachment: fixed;*/
-	height: 500px;
+	/*height: 1350px;*/
+	height: 550px;
+}
+
+@media(max-width: 992px) {
+	#section-aboutus {
+		background: rgba(0, 0, 0, .7) !important;
+		height: 1350px;
+	}
 }
 
 /* ================ Location Section ================ */
@@ -408,6 +416,7 @@ left: calc(50% - 200px);
 	border-radius: 4px;
 	/*width: 7rem;*/
 }
+
 
 
 
