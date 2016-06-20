@@ -75,7 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				                {{--<img src="{{ asset('flux_asset/images/FluxGallery/slider/pic_1.png') }}" data-thumb="{{ asset('flux_asset/images/FluxGallery/slider/pic_1.png') }}" alt="" />--}}
 				                {{--<img src="{{ asset('flux_asset/images/FluxGallery/slider/pic_3.png') }}" data-thumb="{{ asset('flux_asset/images/FluxGallery/slider/pic_3.png') }}" alt="" />--}}
 				                {{--<img src="{{ asset('flux_asset/images/FluxGallery/slider/pic_4.png') }}" data-thumb="{{ asset('flux_asset/images/FluxGallery/slider/pic_4.png') }}" alt="" />--}}
-				            </div>
+							</div>
 				        </div>
 				          {{--<div class="header_desc">--}}
 				 			 {{--<div class="logo">--}}
