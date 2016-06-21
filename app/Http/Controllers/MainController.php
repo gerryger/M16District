@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\M16_instagram_acc;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -24,6 +25,27 @@ class MainController extends Controller
            return view('admin.home');
        }else{
            return view('admin.login');
+       }
+   }
+
+   //GET
+   public function m16_instagram(){
+       return view('admin.m16_instagram');
+   }
+
+   //POST
+   public function doAddInstagram(Request $request){
+       if($request != null){
+           $instagramID = $request->get('txtInstagramID');
+           $instagramPass = $request->get('txtInstagramPass');
+
+           $obj = new M16_instagram_acc();
+           $obj->instagram_id = $instagramID;
+           $obj->instagram_pass = $instagramPass;
+
+           $obj->save();
+
+           return redirect('/m16_instagram');
        }
    }
 

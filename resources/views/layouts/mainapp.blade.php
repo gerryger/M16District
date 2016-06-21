@@ -129,10 +129,10 @@
                         <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
+                        {{--<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>--}}
+                        {{--</li>--}}
+                        {{--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>--}}
+                        {{--</li>--}}
                         <li class="divider"></li>
                         <li>
                             <a href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -186,6 +186,9 @@
                                 <li>
                                     <a href="{{ url('/s_featureddish') }}">Featured Dish</a>
                                 </li>
+                                <li>
+                                    <a href="{{ url('/m16_instagram') }}">Add Instagram Account</a>
+                                </li>
                             </ul>
                         </li>
                         @endif
@@ -199,6 +202,9 @@
                                 <li>
                                     <a href="#">Test 2</a>
                                 </li>
+                                <li>
+                                    <a href="{{ url('/m16_instagram') }}">Add Instagram Account</a>
+                                </li>
                             </ul>
                         </li>
                         @endif
@@ -211,6 +217,9 @@
                                 </li>
                                 <li>
                                     <a href="#">Test 2</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/m16_instagram') }}">Add Instagram Account</a>
                                 </li>
                             </ul>
                         </li>
@@ -233,6 +242,9 @@
                                 </li>
                                 <li>
                                     <a href="{{ url('/f_promoevent') }}">Promo & Event</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/m16_instagram') }}">Add Instagram Account</a>
                                 </li>
                             </ul>
                         </li>

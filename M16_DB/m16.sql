@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 14, 2016 at 04:39 AM
+-- Generation Time: Jun 21, 2016 at 06:39 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `admins` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `admins`
@@ -79,7 +79,8 @@ INSERT INTO `admins` (`id`, `name`, `page`, `email`, `password`, `created_at`, `
 (4, 'Ms. Ettie Graham PhD', 'l', 'Aida81@Mills.net', 'admin', '2016-03-07 05:10:20', '2016-03-07 05:10:20'),
 (5, 'gerryger', '*', 'gerry@ganteng.com', 'asdasd', '2016-03-07 05:10:20', '2016-03-07 05:19:22'),
 (6, 'Mr. Scot Bechtelar', 'l', 'Javonte19@hotmail.com', 'admin', '2016-03-07 05:10:20', '2016-03-07 05:10:20'),
-(7, 'flux_admin', 'f', 'flux@test.com', 'admin', '2016-03-31 17:00:00', '2016-03-31 17:00:00');
+(7, 'flux_admin', 'f', 'flux@test.com', 'admin', '2016-03-31 17:00:00', '2016-03-31 17:00:00'),
+(8, 'admin', '*', 'admin', 'admin', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -328,6 +329,21 @@ INSERT INTO `l_about_us` (`id`, `about`, `fontfamily`, `color`, `fontsize`, `ins
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `m16_instagram_account`
+--
+
+CREATE TABLE IF NOT EXISTS `m16_instagram_account` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `instagram_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `instagram_pass` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -359,7 +375,8 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2016_04_23_030337_create_s_aboutus_table', 13),
 ('2016_04_23_232244_create_s_pricing_table', 14),
 ('2016_05_09_034506_create_s_featured_dish', 15),
-('2016_06_10_071358_create_about_us_table_for_landingpage', 16);
+('2016_06_10_071358_create_about_us_table_for_landingpage', 16),
+('2016_06_21_153725_create_register_instagram_account', 17);
 
 -- --------------------------------------------------------
 

@@ -84,6 +84,11 @@ Route::group(['middleware' => ['web']], function () {
     Route::delete('/deleteevent/{event}', 'MainController@deleteevent');
     Route::post('/doeditevent', 'MainController@doeditevent');
 
+    //Add instagram account[START]
+    Route::get('/m16_instagram', 'MainController@m16_instagram');
+    Route::post('/doAddInstagram', 'MainController@doAddInstagram');
+    //Add instagram account[END]
+
     //Landing Page[START]
 
         //About Us
