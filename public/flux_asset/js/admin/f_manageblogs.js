@@ -23,12 +23,14 @@ function init(){
     }
     resetForm();
 
-    tinyMCE.init({
-        selector:'textarea',
-        plugins: 'image',
-        menubar: 'insert',
-        max_width: 700
-    });
+    //tinyMCE.init({
+    //    selector:'textarea',
+    //    plugins: 'image',
+    //    menubar: 'insert',
+    //    max_width: 700
+    //});
+
+    $('#txtDesc').trumbowyg();
 }
 
 function resetForm() {

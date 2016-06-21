@@ -29,6 +29,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link type="text/css" rel="stylesheet" href="{{ asset('flux_asset/js/simplePagination/simplePagination.css') }}"/>
 <script type="text/javascript" src="{{ asset('flux_asset/js/simplePagination/jquery.simplePagination.js') }}"></script>
 
+
+{{-- responsify --}}
+<script type="text/javascript" src="{{asset('flux_asset/js/responsify/responsify.min.js')}}"></script>
+
 	<!----- Scroll top --------->
 <script type="text/javascript" src="{{ asset('flux_asset/js/move-top.js') }}"></script>
 <script type="text/javascript" src="{{ asset('flux_asset/js/easing.js') }}"></script>
@@ -68,7 +72,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				            <div id="slider" class="nivoSlider">
 								@if(is_array($sliders) || is_object($sliders))
 									@foreach($sliders as $slider)
-										<img src="{{ asset('flux_asset/images/sliders/'.$slider->image) }}" data-thumb="{{ asset('flux_asset/images/sliders/'.$slider->image) }}" alt="" />
+										<img src="{{ asset('flux_asset/images/sliders/'.$slider->image) }}" data-thumb="{{ asset('flux_asset/images/sliders/'.$slider->image) }}"
+											 alt="" data-focus-left="0.00" data-focus-top="0.01" data-focus-right="1.00" data-focus-bottom="1.00" />
 									@endforeach
 								@endif
 				                {{--<img src="{{ asset('flux_asset/images/FluxGallery/slider/logo.png') }}" data-thumb="{{ asset('flux_asset/images/FluxGallery/slider/logo.png') }}" alt="" />--}}
@@ -217,7 +222,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</script>
     <a href="#" id="toTop"><span id="toTopHover"> </span></a>
 	<!------------ End scroll Top ------------>
-  </div>  
+  </div>
+
+	<script type="text/javascript" src="{{asset('flux_asset/ModalWindowEffects/js/classie.js')}}"></script>
+  	<script type="text/javascript" src="{{asset('flux_asset/ModalWindowEffects/js/modalEffects.js')}}"></script>
+
+	  <!-- for the blur effect -->
+	  <!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+	  <script type="text/javascript">
+		  // this is important for IEs
+		  var polyfilter_scriptpath = '/js/';
+
+	  </script>
+  	<script type="text/javascript" src="{{asset('flux_asset/ModalWindowEffects/js/cssParser.js')}}"></script>
+  	<script type="text/javascript" src="{{asset('flux_asset/ModalWindowEffects/js/css-filters-polyfill.js')}}"></script>
 </body>
 </html>
 

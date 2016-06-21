@@ -58,6 +58,11 @@
     <script type="text/javascript" src="{{ asset('sbadmin/bower_components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js') }}"></script>
     <!-- Mjolnic bootstrap colorpicker [END] -->
 
+    <!-- Trumbowyg[START] -->
+    <link rel="stylesheet" href="{{asset('flux_asset/js/bower_components/trumbowyg/dist/ui/trumbowyg.min.css')}}" />
+    <script type="text/javascript" src="{{asset('flux_asset/js/bower_components/trumbowyg/dist/trumbowyg.min.js')}}"></script>
+    <!-- Trumbowyg[END] -->
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

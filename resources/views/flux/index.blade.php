@@ -6,6 +6,14 @@
             <div class="content homePage">
                 <div class="section group">
                     <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h2>About</h2>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <h1>Tes</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-sm-8 col-md-8 col-lg-8">
                             <h2>Recent Blog</h2>
                             <div class="col-sm-12 col-md-12 col-lg-12">
