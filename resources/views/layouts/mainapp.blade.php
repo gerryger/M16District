@@ -94,8 +94,9 @@
     <script src="{{ asset('sbadmin/bower_components/datatables/media/js/dataTables.jqueryui.min.js') }}"></script>
     <script src="{{ asset('sbadmin/bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
 
-    <!-- TinyMCE -->
-    <script type="text/javascript" src="{{ asset('sbadmin/tinymce/tinymce.min.js') }}"></script>
+    <!-- Jquery-notebook -->
+    <link rel="stylesheet" href="{{ asset('sbadmin/bower_components/jquery-notebook/build/jquery.notebook.min.css') }}" />
+    <script type="text/javascript" src="{{ asset('sbadmin/bower_components/jquery-notebook/build/jquery.notebook.min.js') }}"></script>
 
     <!-- Dropify -->
     <link rel="stylesheet" href="{{ asset('landingpage_asset/bower_components/dropify/dist/css/dropify.min.css') }}" />
@@ -133,7 +134,7 @@
                         {{--</li>--}}
                         {{--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>--}}
                         {{--</li>--}}
-                        <li class="divider"></li>
+                        {{--<li class="divider"></li>--}}
                         <li>
                             <a href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
@@ -255,132 +256,6 @@
                                 <a href="{{ url('/manageadmin') }}"><i class="fa fa-bar-chart-o fa-fw"></i> Manage Admin</a>
                              </li>
                         @endif
-
-                        {{-- Access Right For Superadmin [START]--}}
-                             {{--@if($page == '*')--}}
-                             {{--<li>--}}
-                                 {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Landing Page<span class="fa arrow"></span></a>--}}
-                                 {{--<ul class="nav nav-second-level">--}}
-                                     {{--<li>--}}
-                                         {{--<a href="{{ url('/aboutus') }}">About Us</a>--}}
-                                     {{--</li>--}}
-                                     {{--<li>--}}
-                                         {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Events<span class="fa arrow"></span></a>--}}
-                                         {{--<ul class="nav nav-second-level">--}}
-                                             {{--<li>--}}
-                                                 {{--<a href="{{ url('/newevent') }}">Add Event</a>--}}
-                                             {{--</li>--}}
-                                             {{--<li>--}}
-                                                 {{--<a href="{{ url('/editevent') }}">Edit Event</a>--}}
-                                             {{--</li>--}}
-                                         {{--</ul>--}}
-                                         {{--<!-- /.nav-second-level -->--}}
-                                     {{--</li>--}}
-                                 {{--</ul>--}}
-                             {{--</li>--}}
-
-                             {{--<li>--}}
-                                 {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Subhaus<span class="fa arrow"></span></a>--}}
-                                 {{--<ul class="nav nav-second-level">--}}
-                                     {{--<li>--}}
-                                         {{--<a href="{{ url('/subhausslider') }}">Home Slider</a>--}}
-                                     {{--</li>--}}
-                                     {{--<li>--}}
-                                         {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Events<span class="fa arrow"></span></a>--}}
-                                         {{--<ul class="nav nav-second-level">--}}
-                                             {{--<li>--}}
-                                                 {{--<a href="{{ url('/newevent') }}">Add Event</a>--}}
-                                             {{--</li>--}}
-                                             {{--<li>--}}
-                                                 {{--<a href="{{ url('/editevent') }}">Edit Event</a>--}}
-                                             {{--</li>--}}
-                                         {{--</ul>--}}
-                                         {{--<!-- /.nav-second-level -->--}}
-                                     {{--</li>--}}
-                                 {{--</ul>--}}
-                             {{--</li>--}}
-
-                             {{--<li>--}}
-                                 {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Pitstop<span class="fa arrow"></span></a>--}}
-                                 {{--<ul class="nav nav-second-level">--}}
-                                     {{--<li>--}}
-                                         {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Events<span class="fa arrow"></span></a>--}}
-                                         {{--<ul class="nav nav-second-level">--}}
-                                             {{--<li>--}}
-                                                 {{--<a href="{{ url('/newevent') }}">Add Event</a>--}}
-                                             {{--</li>--}}
-                                             {{--<li>--}}
-                                                 {{--<a href="{{ url('/editevent') }}">Edit Event</a>--}}
-                                             {{--</li>--}}
-                                         {{--</ul>--}}
-                                         {{--<!-- /.nav-second-level -->--}}
-                                     {{--</li>--}}
-                                     {{--<li>--}}
-                                         {{--<a href="#">Test 2</a>--}}
-                                     {{--</li>--}}
-                                 {{--</ul>--}}
-                             {{--</li>--}}
-
-                             {{--<li>--}}
-                                 {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Monroe<span class="fa arrow"></span></a>--}}
-                                 {{--<ul class="nav nav-second-level">--}}
-                                     {{--<li>--}}
-                                         {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Events<span class="fa arrow"></span></a>--}}
-                                         {{--<ul class="nav nav-second-level">--}}
-                                             {{--<li>--}}
-                                                 {{--<a href="{{ url('/newevent') }}">Add Event</a>--}}
-                                             {{--</li>--}}
-                                             {{--<li>--}}
-                                                 {{--<a href="{{ url('/editevent') }}">Edit Event</a>--}}
-                                             {{--</li>--}}
-                                         {{--</ul>--}}
-                                         {{--<!-- /.nav-second-level -->--}}
-                                     {{--</li>--}}
-                                     {{--<li>--}}
-                                         {{--<a href="#">Test 2</a>--}}
-                                     {{--</li>--}}
-                                 {{--</ul>--}}
-                             {{--</li>--}}
-
-                             {{--<li>--}}
-                                 {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Flux<span class="fa arrow"></span></a>--}}
-                                 {{--<ul class="nav nav-second-level">--}}
-                                     {{--<li>--}}
-                                         {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Events<span class="fa arrow"></span></a>--}}
-                                         {{--<ul class="nav nav-second-level">--}}
-                                             {{--<li>--}}
-                                                 {{--<a href="{{ url('/newevent') }}">Add Event</a>--}}
-                                             {{--</li>--}}
-                                             {{--<li>--}}
-                                                 {{--<a href="{{ url('/editevent') }}">Edit Event</a>--}}
-                                             {{--</li>--}}
-                                         {{--</ul>--}}
-                                         {{--<!-- /.nav-second-level -->--}}
-                                     {{--</li>--}}
-                                     {{--<li>--}}
-                                         {{--<a href="#">Test 2</a>--}}
-                                     {{--</li>--}}
-                                 {{--</ul>--}}
-                             {{--</li>--}}
-
-                            {{--<li>--}}
-                                {{--<a href="{{ url('/manageadmin') }}"><i class="fa fa-bar-chart-o fa-fw"></i> Manage Admin</a>--}}
-                            {{--</li>--}}
-                            {{--@endif--}}
-                        {{-- Access Right For Superadmin [END]--}}
-
-                             {{--<li>--}}
-                                 {{--<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Events<span class="fa arrow"></span></a>--}}
-                                 {{--<ul class="nav nav-second-level">--}}
-                                     {{--<li>--}}
-                                         {{--<a href="{{ url('/newevent') }}">Add Event</a>--}}
-                                     {{--</li>--}}
-                                     {{--<li>--}}
-                                         {{--<a href="{{ url('/editevent') }}">Edit Event</a>--}}
-                                     {{--</li>--}}
-                                 {{--</ul>--}}
-                                 {{--<!-- /.nav-second-level -->--}}
-                             {{--</li>--}}
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -402,12 +277,6 @@
         $(document).ready(function(){
             $('#eventsTable').dataTable();
         });
-
-
-
-//        $(function(){
-//            $('#datetimepickerStart').datepicker();
-//        });
     </script>
 </body>
 </html>

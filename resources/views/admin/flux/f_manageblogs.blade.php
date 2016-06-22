@@ -21,8 +21,8 @@
                         @if(is_array($blogs) || is_object($blogs))
                             @foreach($blogs as $blog)
                                 <tr>
-                                    <td><input type="hidden" class="service_id" value="{{ $blog->id }}" />{{ $blog->title }}</td>
-                                    <td>{{ substr($blog->description,0,50).'...' }}</td>
+                                    <td><input type="hidden" class="blog_id" value="{{ $blog->id }}" />{{ $blog->title }}</td>
+                                    <td><input type="hidden" class="blog_desc" value="{{$blog->description}}" /> {{ substr($blog->description,0,50).'...' }}</td>
                                     <td>{{ $blog->date }}</td>
                                     <td>{{ $blog->image }}</td>
                                     <td>{{ $blog->created_by }}</td>
@@ -54,6 +54,7 @@
             @include('common.errors')
 
             {!! Form::open(array('id'=>'blogForm', 'url'=>'/doaddblog','class'=>'form-horizontal','files'=>'true')) !!}
+                <input type="hidden" name="txtId" />
                 <div class="form-group">
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                         <label class="control-label" for="txtTitle">Title</label>
@@ -67,7 +68,9 @@
                         <label class="control-label" for="txtDesc">Description</label>
                     </div>
                     <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                        {!! Form::textarea('txtDesc', null, array('id'=>'txtDesc', 'class'=>'form-control', 'style'=>'height: 80px')) !!}
+                        <div class="desc-editor"></div>
+                        <input type="hidden" id="txtDesc" name="txtDesc" />
+                        {{--{!! Form::textarea('txtDesc', null, array('id'=>'txtDesc', 'class'=>'form-control', 'style'=>'height: 80px')) !!}--}}
                     </div>
                 </div>
                 <div class="form-group">
@@ -75,7 +78,7 @@
                         <label class="control-label" for="image">Image</label>
                     </div>
                     <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                        {!! Form::file('image', null, array('id'=>'image')) !!}
+                        {!! Form::file('image', null, array('id'=>'image','class'=>'dropify', 'data-height'=>'300', 'data-max-file-size'=>'3M', 'data-allowed-file-extensions'=>'png')) !!}
                     </div>
                 </div>
                 <div class="form-group">
@@ -103,6 +106,7 @@
                     <input value="Add Blog" type="submit" id="btnAddBlog" name="btnAddBlog" class="btn btn-success" />
                     <input value="Update Blog" type="button" id="btnUpdateBlog" name="btnUpdateBlog" class="btn btn-primary" />
                     <input value="Cancel" type="button" id="btnCancel" name="btnCancel" class="btn btn-warning" />
+                    <input value="Cancel Update" type="button" id="btnCancelUpdate" name="btnCancelUpdate" class="btn btn-warning" />
                 </div>
             {!! Form::close() !!}
         </div>

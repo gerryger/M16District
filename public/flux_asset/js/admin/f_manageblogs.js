@@ -2,6 +2,8 @@
  * Created by user on 2016-04-05.
  */
 $(document).ready(function(e){
+    $('.desc-editor').notebook();
+    $('[name="image"]').dropify();
     init();
     $('#btnCancel').click(function(e){
         e.preventDefault();
@@ -11,7 +13,66 @@ $(document).ready(function(e){
         $('input:file').val('');
 
     });
+
+    $('.desc-editor').keyup(function(e){
+        var desc = $(this).text();
+        $('#txtDesc').val(desc);
+    });
+
+    onClickBtnEdit();
+    onClickBtnCancelUpdate();
 });
+
+function onClickBtnEdit(){
+    $('.btnEdit').click(function(e){
+        e.preventDefault();
+
+        var row = $(this).closest('tr');
+        var cells = row.find('td');//dapetin text per cell
+        var id = cells.eq(0).find('.blog_id').val();//dapetin id per cell
+
+        var title = cells.eq(0).text();
+        var desc = cells.eq(1).find('.blog_desc').text();
+        var date = cells.eq(2).text();
+        var image = cells.eq(3).text();
+        var created_by = cells.eq(4).text();
+
+        $('#txtTitle').val(title);
+        $('.desc-editor').html(desc);
+        $('#txtDesc').val(desc);
+        $('#image').attr('data-default-file', "{{asset('flux_asset/images/blog/"+image+"')}}");
+        $('[name="txtId"]').val(id);
+        $('#txtDate').val(date);
+        $('#txtCreatedby').val(created_by);
+
+        //if add btn and cancel btn is visible
+        if($('#btnAddBlog').is(':visible') && $('#btnCancel').is(':visible')){
+            //hide add btn and cancel btn
+            $('#btnAddBlog').hide();
+            $('#btnCancel').hide();
+
+            //show update btn and cancel update btn
+            $('#btnUpdateBlog').show(500);
+            $('#btnCancelUpdate').show(500);
+        }
+    });
+}
+
+function onClickBtnCancelUpdate(){
+    $('#btnCancelUpdate').click(function(e){
+        e.preventDefault();
+
+        if($('#btnUpdateBlog').is(':visible') && $(this).is(':visible')){
+            $('#btnUpdateBlog').hide();
+            $(this).hide();
+
+            $('#btnAddBlog').show(500);
+            $('#btnCancel').show(500);
+        }
+
+        resetForm();
+    });
+}
 
 function init(){
     $('#blogsTable').dataTable({
@@ -21,6 +82,9 @@ function init(){
     if($('#btnUpdateBlog').is(':visible')){
         $('#btnUpdateBlog').hide();
     }
+    if($('#btnCancelUpdate').is(':visible')){
+        $('#btnCancelUpdate').hide();
+    }
     resetForm();
 
     //tinyMCE.init({
@@ -29,8 +93,6 @@ function init(){
     //    menubar: 'insert',
     //    max_width: 700
     //});
-
-    $('#txtDesc').trumbowyg();
 }
 
 function resetForm() {
