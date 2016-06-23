@@ -7,8 +7,10 @@ use App\F_services;
 use App\F_slider;
 use DebugBar\DebugBar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
 
@@ -655,38 +657,91 @@ class FluxController extends Controller
             if($validator->fails()){
                 return redirect('/f_blogs')->withInput()->withErrors($validator);
             }else{
-
-                ini_set('memory_limit','256M');
-
-                //get all parameters
-                $title = $request->get('txtTitle');
-                $desc = $request->get('txtDesc');
-                $date = $request->get('txtDate');
-                $createdby = $request->get('txtCreatedby');
-
-                $blog = new f_blog();
-
-                $dt = new \DateTime();
-
-                $milliseconds = round(microtime(true) * 1000);
-
-                $imgName = 'f_blog_'.$dt->format('Ymd').$milliseconds.'.'.$request->file('image')->getClientOriginalExtension();
-
-                $blog->title = $title;
-                $blog->description = $desc;
-                $blog->image = $imgName;
-                $blog->date = $date;
-                $blog->created_by = $createdby;
-
-                $imgWatermark = Image::make(base_path().'/public/flux_asset/images/FluxGallery/slider/logo.png')->resize(160,60);
-
-                Image::make($request->file('image'))->resize(1280,500)->insert($imgWatermark, 'bottom-right', 10, 10)->save(base_path().'/public/flux_asset/images/blog/'.$imgName)->destroy();
-
-                $blog->save();
-                //echo 'ASSGGJSDFVJGF';
+                if(isset($_POST['btnAddBlog'])){
+                    $this->dbInsertBlog($request);
+                }else if(isset($_POST['btnUpdateBlog'])){
+                    $this->dbUpdateBlog($request);
+                }else{
+                    echo "ERROR!!";
+                }
 
                 return redirect('/f_blogs');
             }
+        }
+    }
+
+    private function dbInsertBlog(Request $request){
+        ini_set('memory_limit','256M');
+
+        //get all parameters
+        $title = $request->get('txtTitle');
+        $desc = $request->get('txtDesc');
+        $date = $request->get('txtDate');
+        $createdby = $request->get('txtCreatedby');
+
+        $blog = new f_blog();
+
+        $dt = new \DateTime();
+
+        $milliseconds = round(microtime(true) * 1000);
+
+        $imgName = 'f_blog_'.$dt->format('Ymd').$milliseconds.'.'.$request->file('image')->getClientOriginalExtension();
+
+        $blog->title = $title;
+        $blog->description = $desc;
+        $blog->image = $imgName;
+        $blog->date = $date;
+        $blog->created_by = $createdby;
+
+        $imgWatermark = Image::make(base_path().'/public/flux_asset/images/FluxGallery/slider/logo.png')->fit(160,60);
+
+        Image::make($request->file('image'))->fit(1280,500)->insert($imgWatermark, 'bottom-right', 10, 10)->save(base_path().'/public/flux_asset/images/blog/'.$imgName)->destroy();
+
+        $blog->save();
+        //echo 'ASSGGJSDFVJGF';
+    }
+
+    private function dbUpdateBlog(Request $request){
+        ini_set('memory_limit','256M');
+        $dt = new \DateTime();
+        $milliseconds = round(microtime(true) * 1000);
+
+        //get all parameters
+        $id = $request->get('txtId');
+        $title = $request->get('txtTitle');
+        $desc = $request->get('txtDesc');
+        $date = $request->get('txtDate');
+        $createdby = $request->get('txtCreatedby');
+        $imgName = 'f_blog_'.$dt->format('Ymd').$milliseconds.'.'.$request->file('image')->getClientOriginalExtension();
+
+        try {
+            $selBlog = f_blog::find($id);
+
+            $this->deleteBlogImageAndThumbnails($selBlog);
+
+            $selBlog->title = $title;
+            $selBlog->description = $desc;
+            $selBlog->image = $imgName;
+            $selBlog->date = $date;
+            $selBlog->created_by = $createdby;
+
+            $imgWatermark = Image::make(base_path().'/public/flux_asset/images/FluxGallery/slider/logo.png')->fit(160,60);
+            Image::make($request->file('image'))->fit(1280,500)->insert($imgWatermark, 'bottom-right', 10, 10)->save(base_path().'/public/flux_asset/images/blog/'.$imgName)->destroy();
+
+            DB::beginTransaction();
+            $selBlog->save();
+            DB::commit();
+        }catch(\Exception $e){
+            return $e->getMessage();
+        }
+
+    }
+
+    private function deleteBlogImageAndThumbnails(f_blog $selBlog){
+        try{
+            File::delete('flux_asset/images/blog/'.$selBlog->image);
+        }catch(\Exception $e){
+            return $e->getMessage();
         }
     }
 

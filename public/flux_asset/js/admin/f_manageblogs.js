@@ -2,7 +2,9 @@
  * Created by user on 2016-04-05.
  */
 $(document).ready(function(e){
-    $('.desc-editor').notebook();
+    $('.desc-editor').notebook(function(){
+        autoFocus: true
+    });
     $('[name="image"]').dropify();
     init();
     $('#btnCancel').click(function(e){
@@ -14,10 +16,10 @@ $(document).ready(function(e){
 
     });
 
-    $('.desc-editor').keyup(function(e){
-        var desc = $(this).text();
-        $('#txtDesc').val(desc);
-    });
+    //$('.desc-editor').keyup(function(e){
+    //    var desc = $(this).text();
+    //    $('#txtDesc').val(desc);
+    //});
 
     onClickBtnEdit();
     onClickBtnCancelUpdate();
@@ -32,13 +34,13 @@ function onClickBtnEdit(){
         var id = cells.eq(0).find('.blog_id').val();//dapetin id per cell
 
         var title = cells.eq(0).text();
-        var desc = cells.eq(1).find('.blog_desc').text();
+        var desc = cells.eq(1).find('.blog_desc').val();
         var date = cells.eq(2).text();
         var image = cells.eq(3).text();
         var created_by = cells.eq(4).text();
 
         $('#txtTitle').val(title);
-        $('.desc-editor').html(desc);
+        //$('.desc-editor').html(desc);
         $('#txtDesc').val(desc);
         $('#image').attr('data-default-file', "{{asset('flux_asset/images/blog/"+image+"')}}");
         $('[name="txtId"]').val(id);

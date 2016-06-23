@@ -29,12 +29,14 @@
                                     <td>{{ $blog->created_at }}</td>
                                     <td>{{ $blog->updated_at }}</td>
                                     <td>
-                                            <button type="submit" class="btn btn-primary btnEdit"><i class="fa fa-btn fa-pencil"></i></button>|
+                                        <span>
+                                            <button type="submit" class="btn btn-primary btnEdit"><i class="fa fa-btn fa-pencil"></i></button>
                                             <form action="{{ url('f_blogs/'.$blog->id) }}" method="POST">
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
                                                 <button type="submit" class="btn btn-danger btnDelete"><i class="fa fa-btn fa-trash"></i></button>
                                             </form>
+                                        </span>
                                     </td>
                                 </tr>
                             @endforeach
@@ -68,9 +70,9 @@
                         <label class="control-label" for="txtDesc">Description</label>
                     </div>
                     <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                        <div class="desc-editor"></div>
-                        <input type="hidden" id="txtDesc" name="txtDesc" />
-                        {{--{!! Form::textarea('txtDesc', null, array('id'=>'txtDesc', 'class'=>'form-control', 'style'=>'height: 80px')) !!}--}}
+                        {{--<div class="desc-editor"></div>--}}
+                        {{--<input type="hidden" id="txtDesc" name="txtDesc" />--}}
+                        {!! Form::textarea('txtDesc', null, array('id'=>'txtDesc', 'class'=>'form-control', 'style'=>'height: 80px')) !!}
                     </div>
                 </div>
                 <div class="form-group">
@@ -104,7 +106,7 @@
                 </div>
                 <div class="col-md-12 col-lg-12 text-right">
                     <input value="Add Blog" type="submit" id="btnAddBlog" name="btnAddBlog" class="btn btn-success" />
-                    <input value="Update Blog" type="button" id="btnUpdateBlog" name="btnUpdateBlog" class="btn btn-primary" />
+                    <input value="Update Blog" type="submit" id="btnUpdateBlog" name="btnUpdateBlog" class="btn btn-primary" />
                     <input value="Cancel" type="button" id="btnCancel" name="btnCancel" class="btn btn-warning" />
                     <input value="Cancel Update" type="button" id="btnCancelUpdate" name="btnCancelUpdate" class="btn btn-warning" />
                 </div>

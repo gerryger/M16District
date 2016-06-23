@@ -6,14 +6,6 @@
             <div class="content homePage">
                 <div class="section group">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <h2>About</h2>
-                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                <h1>Tes</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
                         <div class="col-sm-8 col-md-8 col-lg-8">
                             <h2>Recent Blog</h2>
                             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -64,20 +56,55 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="eventPromoDiv">
                             <h2>Promo & Events</h2>
-                            <table id="eventPromoTable" class="eventPromoTable">
-                                <tbody>
-                                    @if(is_array($eventpromos) || is_object($eventpromos))
-                                        @foreach($eventpromos as $eventpromo)
-                                            <tr>
-                                                <td><input type="hidden" class="eventpromo_id" value="{{ $eventpromo->id }}" />{{ $eventpromo->name }}</td>
-                                                <td style="float: right">{{ $eventpromo->start }}~{{ $eventpromo->end }}</td>
-                                            </tr>
-                                        @endforeach
-                                    @endif
-                                </tbody>
-                            </table>
+                            <ul>
+                                <li>
+                                    <a class="lightbox-image-link" href="{{asset('flux_asset/images/FluxGallery/slider/pic_1.png')}}" data-lightbox="lightbox-image-set" data-title="TESSSTTT" data-caption="this is caption">
+                                        <div class="image-container">
+                                            <img src="{{asset('flux_asset/images/FluxGallery/slider/pic_1.png')}}" class="lightbox-image" alt="image-1" />
+                                            <div class="caption">
+                                                <div class="promoevent_title">Test Event 1</div>
+                                                <div class="promoevent_date">2016/06/23 ~ 2016/06/23</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="lightbox-image-link" href="{{asset('flux_asset/images/FluxGallery/slider/pic_2.png')}}" data-lightbox="lightbox-image-set" data-title="TESSSTTT" data-caption="this is caption">
+                                        <div class="image-container">
+                                            <img src="{{asset('flux_asset/images/FluxGallery/slider/pic_2.png')}}" class="lightbox-image" alt="image-2" />
+                                            <div class="caption">
+                                                <div class="promoevent_title">Test Event 2</div>
+                                                <div class="promoevent_date">2016/06/23 ~ 2016/06/23</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="lightbox-image-link" href="{{asset('flux_asset/images/FluxGallery/slider/pic_3.png')}}" data-lightbox="lightbox-image-set" data-title="TESSSTTT" data-caption="this is caption">
+                                        <div class="image-container">
+                                            <img src="{{asset('flux_asset/images/FluxGallery/slider/pic_3.png')}}" class="lightbox-image" alt="image-3" />
+                                            <div class="caption">
+                                                <div class="promoevent_title">Test Event 2</div>
+                                                <div class="promoevent_date">2016/06/23 ~ 2016/06/23</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            {{--<table id="eventPromoTable" class="eventPromoTable">--}}
+                                {{--<tbody>--}}
+                                    {{--@if(is_array($eventpromos) || is_object($eventpromos))--}}
+                                        {{--@foreach($eventpromos as $eventpromo)--}}
+                                            {{--<tr>--}}
+                                                {{--<td><input type="hidden" class="eventpromo_id" value="{{ $eventpromo->id }}" />{{ $eventpromo->name }}</td>--}}
+                                                {{--<td style="float: right">{{ $eventpromo->start }}~{{ $eventpromo->end }}</td>--}}
+                                            {{--</tr>--}}
+                                        {{--@endforeach--}}
+                                    {{--@endif--}}
+                                {{--</tbody>--}}
+                            {{--</table>--}}
                         </div>
                     </div>
                     <br />
@@ -104,6 +131,8 @@
             /*event promo table paging [START]*/
             pagingForEventPromoTable();
             /*event promo table paging [END]*/
+
+            initLightbox();
 
             /*event promo table click event [START]*/
             $('.eventPromoTable tr').click(function(e){
@@ -185,9 +214,9 @@
         }
 
         function pagingForEventPromoTable(){
-            var items = $('#eventPromoTable tr');
+            var items = $('#eventPromoDiv a');
             var numItems = items.length;
-            var perPage = 2;
+            var perPage = 3;
 
             items.slice(perPage).hide();
 
@@ -201,6 +230,15 @@
 
                     items.hide().slice(start,end).show();
                 }
+            });
+        }
+
+        function initLightbox(){
+            lightbox.option({
+                'alwaysShowNavOnTouchDevices': true,
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'positionFromTop': 100
             });
         }
     </script>
